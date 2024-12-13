@@ -1,0 +1,5 @@
+@import "./fonts.css";
+body {
+  font-family: "Inter", sans-serif;
+  color: #26273f;
+}
