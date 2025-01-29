@@ -1,10 +1,71 @@
-<main>
-  <header>
-    <h1>Rodrigón</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-    </nav>
-  </header>
-</main>
+---
+export interface ExperienceProps {
+  image: string;
+  name: string;
+  organization: string;
+  mainRole: string;
+  roleDescription: {
+    frontend: string[];
+    backend: string[];
+    management: string[];
+  };
+  experienceType: string;
+  description: string;
+}
+
+const {
+  experience: {
+    image,
+    name,
+    organization,
+    mainRole,
+    roleDescription: { frontend, backend, management },
+    description,
+    experienceType,
+  },
+} = Astro.props as { experience: ExperienceProps };
+---
+
+<div class="flex flex-col items-center">
+  <div class="flex items-start flex-col md:flex-row">
+    <div
+      class="flex flex-col items-center md:items-start m-3.5 md:w-1/2 border-red-50 border-4"
+    >
+      <img src={image} alt={name} width="200px" />
+      <h3 class="font-bold">{name}</h3>
+      <p>{organization}</p>
+      <div class="flex flex-col items-center">
+        <p class="font-bold text-pinkish">{mainRole}</p>
+      </div><p>{experienceType}</p>
+
+      <p class="whitespace-pre-wrap">{description}</p>
+    </div>
+    <div
+      class="flex flex-col items-center m-3.5 border-red-50 border-4 w-full md:w-1/2"
+    >
+      <p>{mainRole}</p>
+      <div class="flex flex-row md:flex-col items-center justify-around w-full">
+        <div class="border-red-50 border-4">
+          <h4>Frontend</h4>
+          {frontend.map((tech) => <li key={tech}>{tech}</li>)}
+        </div>
+        <div class="border-red-50 border-4">
+          <h4>Backend</h4>
+          {backend.map((tech) => <p>{tech}</p>)}
+        </div>
+      </div>
+      <div class="border-red-50 border-4">
+        <h4>Management</h4>
+        {management.map((tech) => <p>{tech}</p>)}
+      </div>
+    </div>
+  </div>
+</div>
+<svg
+  width="35"
+  height="35"
+  viewBox="0 0 35 35"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="17.5" cy="17.5" r="17.5" fill="#1C2668"></circle>
+</svg>
