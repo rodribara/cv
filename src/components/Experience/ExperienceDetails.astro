@@ -1,0 +1,29 @@
+---
+import Image from "astro/components/Image.astro";
+
+export interface ExperienceDetailsProps {
+  image: string;
+  name: string;
+  organization: string;
+  mainRole: string;
+  experienceType: string;
+  description: string;
+}
+
+const { image, name, organization, mainRole, experienceType, description } =
+  Astro.props as ExperienceDetailsProps;
+console.log(image, name, organization, mainRole, experienceType, description);
+---
+
+<div
+  class="flex flex-col items-center md:items-start m-3.5 md:w-1/2 border-red-50 border-4"
+>
+  <Image loading="lazy" src={image} alt={name} />
+  <h3 class="font-bold">{name}</h3>
+  <p>{organization}</p>
+  <div class="flex flex-col items-center">
+    <p class="font-bold text-pinkish">{mainRole}</p>
+  </div>
+  <p>{experienceType}</p>
+  <p class="whitespace-pre-wrap">{description}</p>
+</div>

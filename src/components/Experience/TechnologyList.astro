@@ -1,0 +1,15 @@
+---
+export interface TechnologyListProps {
+  title: string;
+  technologies: string[];
+}
+
+const { title, technologies } = Astro.props as TechnologyListProps;
+---
+
+<div class="border-red-50 border-4">
+  <h4>{title}</h4>
+  <ul>
+    {technologies.map((tech, index) => <li key={index}>{tech}</li>)}
+  </ul>
+</div>
