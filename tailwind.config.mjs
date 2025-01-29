@@ -5,6 +5,8 @@ export default {
 		extend: {colors: {
 			darkBlue: '#26273f',
 			pinkish: "#fe5980",
+			damascus: "#FF6464"
+			
 		  },},
 	},
 	plugins: [],

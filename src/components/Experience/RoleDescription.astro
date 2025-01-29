@@ -10,12 +10,12 @@ export interface RoleDescriptionProps {
 const { frontend, backend, management } = Astro.props as RoleDescriptionProps;
 ---
 
-<div
-  class="flex flex-col items-center m-3.5 border-red-50 border-4 w-full md:w-1/2"
->
-  <div class="flex flex-row md:flex-col items-center justify-around w-full">
-    <TechnologyList title="Frontend" technologies={frontend} />
-    <TechnologyList title="Backend" technologies={backend} />
-    <TechnologyList title="Management" technologies={management} />
+<div class="flex flex-col items-center m-3.5 w-full md:w-1/2">
+  <div
+    class="flex flex-row md:flex-col md:items-center justify-around w-full sm:items-start"
+  >
+    <TechnologyList title="front.end" technologies={frontend} />
+    <TechnologyList title="back.end" technologies={backend} />
+    <TechnologyList title="management" technologies={management} />
   </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 
 export interface ExperienceDetailsProps {
   image: string;
@@ -15,15 +15,13 @@ const { image, name, organization, mainRole, experienceType, description } =
 console.log(image, name, organization, mainRole, experienceType, description);
 ---
 
-<div
-  class="flex flex-col items-center md:items-start m-3.5 md:w-1/2 border-red-50 border-4"
->
-  <Image loading="lazy" src={image} alt={name} />
-  <h3 class="font-bold">{name}</h3>
-  <p>{organization}</p>
-  <div class="flex flex-col items-center">
-    <p class="font-bold text-pinkish">{mainRole}</p>
+<div class="flex flex-col justify-center text-center mx-5 m-3.5 md:w-1/2">
+  <div class="mx-10">
+    <img loading="lazy" src={image} alt={name} />
+  </div><p class="font-bold text-darkBlue">{mainRole}</p>
+  <div class="py-3 flex flex-col gap-3">
+    <h3 class="font-bold text-pinkish text-3xl">{name}</h3>
+
+    <p class="whitespace-pre-wrap">{description}</p>
   </div>
-  <p>{experienceType}</p>
-  <p class="whitespace-pre-wrap">{description}</p>
 </div>
