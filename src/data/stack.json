@@ -1,0 +1,23 @@
+{
+  "mainStack": {
+    "frontend": [
+      { "name": "React", "image": "./src/assets/react.png" },
+      { "name": "TypeScript", "image": "./src/assets/react.png" },
+      { "name": "TailwindCSS", "image": "./src/assets/react.png" }
+    ],
+    "backend": [
+      { "name": "Node.js", "image": "./src/assets/react.png" },
+      { "name": "Express", "image": "./src/assets/react.png" },
+      { "name": "MongoDB", "image": "./src/assets/react.png" }
+    ],
+    "management": [
+      { "name": "Agile", "image": "./src/assets/react.png" },
+      { "name": "Scrum", "image": "./src/assets/react.png" }
+    ]
+  },
+  "secondaryStack": [
+    { "name": "Vue", "image": "./src/assets/react.png" },
+    { "name": "Vue", "image": "./src/assets/react.png" },
+    { "name": "Vue", "image": "./src/assets/react.png" }
+  ]
+}

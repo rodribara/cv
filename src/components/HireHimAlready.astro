@@ -1,0 +1,32 @@
+---
+import Stack from "./Stack/Stack.astro";
+import stack from "../data/stack.json";
+
+export interface HireHimAlreadyProps {
+  title: string;
+}
+
+const { title } = Astro.props as HireHimAlreadyProps;
+---
+
+<main>
+  <div class="flex justify-center flex-col items-center gap-2">
+    <div class="flex justify-center flex-col items-center gap-2 mt-3 mb-16">
+      <button
+        onclick="window.location.href='mailto:test@test.com';"
+        class="text-3xl font-bold bg-teal-500 p-2 px-7 text-white rounded-lg drop-shadow-xl"
+      >
+        {title}
+      </button>
+    </div>
+  </div>
+
+  <style>
+    .horizontal-line {
+      color: #26273f;
+      border: none;
+      height: 5px;
+      background-color: #26273f;
+    }
+  </style>
+</main>

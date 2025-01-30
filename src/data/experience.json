@@ -1,0 +1,69 @@
+{
+  "experiences": [
+    {
+      "image": "./src/assets/Globaltask.png",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "A platform that allows entrepreneurs and organizations to connect and find a match in project funding.\nWorked on the overhaul of the site, through a UX figma design implementation.\nWorked involved the construction of reusable components that could make the site cohesive and cohesive.\nThe project uses next.js with MUI theming through emotion.js.\nTools used for this were RTKquery to solve the responsiveness of the site while handling the need to avoid stale data through the form filling sections.",
+      "roleDescription": {
+        "frontend": ["react", "typescript", "tailwindcss"],
+        "backend": ["nodejs", "express", "mongodb"],
+        "management": ["agile", "scrum"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "image": "./src/assets/Globant.png",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
+      "roleDescription": {
+        "frontend": ["react", "typescript", "tailwindcss"],
+        "backend": ["nodejs", "express", "mongodb"],
+        "management": ["agile", "scrum"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "image": "./src/assets/thestartup.png",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
+      "roleDescription": {
+        "frontend": ["react", "typescript", "tailwindcss"],
+        "backend": ["nodejs", "express", "mongodb"],
+        "management": ["agile", "scrum"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "image": "./src/assets/GL.png",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
+      "roleDescription": {
+        "frontend": ["react", "typescript", "tailwindcss"],
+        "backend": ["nodejs", "express", "mongodb"],
+        "management": ["agile", "scrum"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "image": "./src/assets/freelance.png",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
+      "roleDescription": {
+        "frontend": ["react", "typescript", "tailwindcss"],
+        "backend": ["nodejs", "express", "mongodb"],
+        "management": ["agile", "scrum"],
+        "experienceType": "freelance"
+      }
+    }
+  ]
+}

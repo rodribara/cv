@@ -1,84 +1,6 @@
 ---
 import Experience from "./Experience/Experience.astro";
-
-const technologies = [
-  {
-    image: "./src/assets/Globaltask.png",
-    name: "Local Freelance Project",
-    organization: "Local Freelance",
-    mainRole: "full.stack developer",
-    description: ` A platform that allows entrepreneurs and organizations to connect and find a match in project funding .
-    Worked on the overhaul of the site, through a UX figma design implementation.
-Worked involved the construction of reusable components that could make the site cosize and cohesive.
- The project uses next.js with MUI theming through emotion.js.
- Tools used for this where 
-Added RTKquery to solve the responsiveness of the site while handling  need to avoid stale data thorugh the form filling sections.`,
-    roleDescription: {
-      frontend: ["react", "typescript", "tailwindcss"],
-      backend: ["nodejs", "express", "mongodb"],
-      management: ["agile", "scrum"],
-      experienceType: "freelance",
-    },
-  },
-  {
-    image: "./src/assets/Globant.png",
-    name: "Local Freelance Project",
-    organization: "Local Freelance",
-    mainRole: "full.stack developer",
-    description:
-      " A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
-    roleDescription: {
-      frontend: ["react", "typescript", "tailwindcss"],
-      backend: ["nodejs", "express", "mongodb"],
-      management: ["agile", "scrum"],
-      experienceType: "freelance",
-    },
-  },
-  {
-    image: "./src/assets/thestartup.png",
-    name: "Local Freelance Project",
-    organization: "Local Freelance",
-    mainRole: "full.stack developer",
-    description:
-      " A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
-    roleDescription: {
-      frontend: ["react", "typescript", "tailwindcss"],
-      backend: ["nodejs", "express", "mongodb"],
-      management: ["agile", "scrum"],
-      experienceType: "freelance",
-    },
-  },
-  {
-    image: "./src/assets/GL.png",
-    name: "Local Freelance Project",
-    organization: "Local Freelance",
-    mainRole: "full.stack developer",
-    description:
-      " A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
-    roleDescription: {
-      frontend: ["react", "typescript", "tailwindcss"],
-      backend: ["nodejs", "express", "mongodb"],
-      management: ["agile", "scrum"],
-      experienceType: "freelance",
-    },
-  },
-  {
-    image: "./src/assets/freelance.png",
-    name: "Local Freelance Project",
-    organization: "Local Freelance",
-    mainRole: "full.stack developer",
-    description:
-      " A platform that allows entrepreneurs and organizations to connect and find a match in project funding.",
-    roleDescription: {
-      frontend: ["react", "typescript", "tailwindcss"],
-      backend: ["nodejs", "express", "mongodb"],
-      management: ["agile", "scrum"],
-      experienceType: "freelance",
-    },
-  },
-];
-
-console.log("agua");
+import experience from "../data/experience.json";
 ---
 
 <main>
@@ -87,7 +9,7 @@ console.log("agua");
     <hr class="horizontal-line h-1 w-12 rounded-md" />
   </div>
   <div class="flex flex-col items-center">
-    {technologies.map((tech) => <Experience experience={tech} />)}
+    {experience.experiences.map((tech) => <Experience experience={tech} />)}
   </div>
 </main>
 
