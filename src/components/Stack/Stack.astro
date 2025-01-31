@@ -2,17 +2,19 @@
 export interface TechnologyListProps {
   title: string;
   techs: { name: string; image?: string }[];
+  iconless?: boolean;
 }
 
-const { title, techs } = Astro.props as TechnologyListProps;
+const { title, techs, iconless } = Astro.props as TechnologyListProps;
 ---
 
-<div class="flex justify-center items-center flex-col">
+<div class="flex justify-center items-center flex-col align-bottom">
   <h4 class="text-3xl font-medium">{title}</h4>
-  <ul class="inline-flex flex-wrap gap-3 flex-col justify-center">
+  <ul class="inline-flex flex-wrap gap-3 flex-row justify-center m-2 items-end">
     {
       techs.map((tech, index) => (
-        <li key={index} class="flex justify-center">
+        <li key={index} class="flex justify-center flex-col ">
+          {!iconless && <img src={tech.image} alt={tech.name} class="w-24" />}
           <p>.{tech.name}</p>
         </li>
       ))
