@@ -3,43 +3,43 @@
     "frontend": [
       {
         "name": "Javascript",
-        "image": "js"
+        "icon": "js"
       },
       {
         "name": "React",
-        "image": "react"
+        "icon": "react"
       },
-      { "name": "TypeScript", "image": "typescript" },
-      { "name": "Next.js", "image": "nextjs" },
-      { "name": "Redux", "image": "redux" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Next.js", "icon": "nextjs" },
+      { "name": "Redux", "icon": "redux" },
       {
         "name": "React Native",
-        "image": "reactNative"
+        "icon": "reactNative"
       },
-      { "name": "TailwindCSS", "image": "tailwindCSS" }
+      { "name": "TailwindCSS", "icon": "tailwindCSS" }
     ],
     "backend": [
-      { "name": "Node.js", "image": "nodejs" },
-      { "name": "Express", "image": "express" },
-      { "name": "PostgreSQL", "image": "postgreSQL" },
-      { "name": "MongoDB", "image": "mongoDB" }
+      { "name": "Node.js", "icon": "nodejs" },
+      { "name": "Express", "icon": "express" },
+      { "name": "PostgreSQL", "icon": "postgreSQL" },
+      { "name": "MongoDB", "icon": "mongoDB" }
     ],
     "management": [
-      { "name": "Agile Scrum", "image": "agileScrum" },
-      { "name": "Git", "image": "git" },
-      { "name": "Kanban", "image": "kanban" }
+      { "name": "Agile Scrum", "icon": "agileScrum" },
+      { "name": "Git", "icon": "git" },
+      { "name": "Kanban", "icon": "kanban" }
     ]
   },
   "secondaryStack": [
-    { "name": "Storybook", "image": "storybook" },
-    { "name": "Vue", "image": "vue" },
-    { "name": "PHP", "image": "php" },
-    { "name": "Retool", "image": "retool" },
-    { "name": "Cloudflare", "image": "cloudflare" },
-    { "name": "Github", "image": "github" },
-    { "name": "Gitlab", "image": "gitlab" },
-    { "name": "Bitbucket", "image": "bitbucket" },
-    { "name": "Jira", "image": "jira" },
-    { "name": "Docker", "image": "docker" }
+    { "name": "Storybook", "icon": "storybook" },
+    { "name": "Vue", "icon": "vue" },
+    { "name": "PHP", "icon": "php" },
+    { "name": "Retool", "icon": "retool" },
+    { "name": "Cloudflare", "icon": "cloudflare" },
+    { "name": "Github", "icon": "github" },
+    { "name": "Gitlab", "icon": "gitlab" },
+    { "name": "Bitbucket", "icon": "bitbucket" },
+    { "name": "Jira", "icon": "jira" },
+    { "name": "Docker", "icon": "docker" }
   ]
 }

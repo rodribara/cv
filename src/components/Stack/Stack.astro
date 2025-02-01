@@ -3,7 +3,7 @@ import Image from "astro/components/Image.astro";
 import { techIcon } from "../../assets/icons/icon.astro";
 export interface TechnologyListProps {
   title: string;
-  techs: { name: string; image?: string }[];
+  techs: { name: string; icon: string }[];
 }
 
 const { title, techs } = Astro.props as TechnologyListProps;
@@ -15,7 +15,7 @@ const { title, techs } = Astro.props as TechnologyListProps;
     {
       techs.map((tech, index) => (
         <li key={index} class="flex justify-center flex-col gap-2">
-          <Image src={techIcon[tech.image]} alt={tech.name} class="w-24" />
+          <Image src={techIcon[tech.icon]} alt={tech.name} class="w-24" />
           <p>.{tech.name}</p>
         </li>
       ))
