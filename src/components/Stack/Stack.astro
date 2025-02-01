@@ -11,7 +11,9 @@ const { title, techs } = Astro.props as TechnologyListProps;
 
 <div class="flex justify-center items-center flex-col align-bottom">
   <h4 class="text-3xl font-medium">{title}</h4>
-  <ul class="inline-flex flex-wrap gap-6 flex-row justify-center m-2 items-end">
+  <ul
+    class="inline-flex flex-wrap gap-6 flex-row justify-center m-2 items-end mx-32"
+  >
     {
       techs.map((tech, index) => (
         <li key={index} class="flex justify-center flex-col gap-2">

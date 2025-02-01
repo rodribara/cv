@@ -40,6 +40,7 @@
     { "name": "Gitlab", "icon": "gitlab" },
     { "name": "Bitbucket", "icon": "bitbucket" },
     { "name": "Jira", "icon": "jira" },
-    { "name": "Docker", "icon": "docker" }
+    { "name": "Docker", "icon": "docker" },
+    { "name": "React Testing Library", "icon": "rtl" }
   ]
 }
