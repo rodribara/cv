@@ -1,0 +1,47 @@
+---
+import Stack from "./Stack/Stack.astro";
+import stack from "../data/stack.json";
+import Divider from "./Divider.astro";
+---
+
+<main class="pb-20">
+  <div class="flex justify-center flex-col items-center gap-2">
+    <h2 class="text-5xl font-bold">main.stack</h2>
+    <hr class="horizontal-line h-1 w-12 rounded-md" />
+  </div>
+  <div class="flex flex-col items-center justify-center gap-9">
+    <div class="flex flex-col items-start justify-start gap-9">
+      <div>
+        <h3 class="text-3xl font-bold items-start">.frontend</h3>
+        <Stack techs={stack.mainStack.frontend} />
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold items-start">.backend</h3>
+        <Stack techs={stack.mainStack.backend} />
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold items-start">.management</h3>
+        <Stack techs={stack.mainStack.management} />
+      </div>
+    </div>
+    <div class="flex justify-center flex-col items-center gap-2">
+      <h3 class="text-3xl font-bold">complementary.stack</h3>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-9">
+      <div class="flex flex-col items-start justify-start gap-9">
+        <div class="flex flex-col items-center">
+          <Stack techs={stack.secondaryStack} />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+  .horizontal-line {
+    color: #26273f;
+    border: none;
+    height: 5px;
+    background-color: #26273f;
+  }
+</style>

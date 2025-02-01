@@ -1,0 +1,21 @@
+---
+export interface TechnologyListProps {
+  title: string;
+  technologies: string[];
+}
+
+const { title, technologies } = Astro.props as TechnologyListProps;
+---
+
+<div class="flex justify-center items-center flex-col">
+  <h4 class="text-3xl font-medium">{title}</h4>
+  <ul class="inline-flex flex-wrap gap-3 flex-col justify-center">
+    {
+      technologies.map((tech, index) => (
+        <li key={index} class="  flex justify-center">
+          <p class=" text-pinkish">.{tech}</p>
+        </li>
+      ))
+    }
+  </ul>
+</div>
