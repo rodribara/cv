@@ -3,42 +3,44 @@
     "frontend": [
       {
         "name": "Javascript",
-        "image": "./src/assets/icons/js.png"
+        "icon": "js"
       },
       {
         "name": "React",
-        "image": "./src/assets/icons/react.png"
+        "icon": "react"
       },
-      { "name": "TypeScript", "image": "./src/assets/icons/typescript.png" },
-      { "name": "Next.js", "image": "./src/assets/icons/nextjs.png" },
-      { "name": "Redux", "image": "./src/assets/icons/RTK.png" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Next.js", "icon": "nextjs" },
+      { "name": "Redux", "icon": "redux" },
       {
         "name": "React Native",
-        "image": "./src/assets/icons/react-native.svg"
+        "icon": "reactNative"
       },
-      { "name": "TailwindCSS", "image": "./src/assets/icons/tailwind.png" }
+      { "name": "TailwindCSS", "icon": "tailwindCSS" }
     ],
     "backend": [
-      { "name": "Node.js", "image": "./src/assets/icons/nodejs.png" },
-      { "name": "Express", "image": "./src/assets/icons/expressjs.png" },
-      { "name": "PostgreSQL", "image": "./src/assets/icons/postgresql.png" },
-      { "name": "MongoDB", "image": "./src/assets/icons/mongodb.png" }
+      { "name": "Node.js", "icon": "nodejs" },
+      { "name": "Express", "icon": "express" },
+      { "name": "PostgreSQL", "icon": "postgreSQL" },
+      { "name": "MongoDB", "icon": "mongoDB" }
     ],
     "management": [
-      { "name": "Agile Scrum", "image": "./src/assets/icons/agile.png" },
-      { "name": "Kanban", "image": "./src/assets/icons/kanban.png" }
+      { "name": "Agile Scrum", "icon": "agileScrum" },
+      { "name": "Git", "icon": "git" },
+      { "name": "Kanban", "icon": "kanban" }
     ]
   },
   "secondaryStack": [
-    { "name": "Storybook", "image": "./src/assets/icons/storybook.png" },
-    { "name": "Vue", "image": "./src/assets/icons/vue.png" },
-    { "name": "PHP", "image": "./src/assets/icons/php.svg" },
-    { "name": "Retool", "image": "./src/assets/icons/Retool.webp" },
-    { "name": "Cloudflare", "image": "./src/assets/icons/cloudflare.png" },
-    { "name": "Github", "image": "./src/assets/icons/github.svg" },
-    { "name": "Gitlab", "image": "./src/assets/icons/gitlab.svg" },
-    { "name": "Bitbucket", "image": "./src/assets/icons/bitbucket.webp" },
-    { "name": "Jira", "image": "./src/assets/icons/jira.png" },
-    { "name": "Docker", "image": "./src/assets/icons/docker-logo.svg" }
+    { "name": "Storybook", "icon": "storybook" },
+    { "name": "Vue", "icon": "vue" },
+    { "name": "PHP", "icon": "php" },
+    { "name": "Retool", "icon": "retool" },
+    { "name": "Cloudflare", "icon": "cloudflare" },
+    { "name": "Github", "icon": "github" },
+    { "name": "Gitlab", "icon": "gitlab" },
+    { "name": "Bitbucket", "icon": "bitbucket" },
+    { "name": "Jira", "icon": "jira" },
+    { "name": "Docker", "icon": "docker" },
+    { "name": "React Testing Library", "icon": "rtl" }
   ]
 }

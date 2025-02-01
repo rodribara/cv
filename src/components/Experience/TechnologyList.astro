@@ -7,7 +7,7 @@ export interface TechnologyListProps {
 const { title, technologies } = Astro.props as TechnologyListProps;
 ---
 
-<div class="flex justify-center items-center flex-col">
+<div class="flex md:justify-center sm:justify-start items-center flex-col mx-7">
   <h4 class="text-3xl font-medium">{title}</h4>
   <ul class="inline-flex flex-wrap gap-3 flex-col justify-center">
     {
