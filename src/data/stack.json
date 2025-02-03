@@ -12,7 +12,7 @@
       "mui"
     ],
     "backend": ["nodejs", "express", "postgreSQL", "mongoDB"],
-    "management": ["agileScrum", "git", "kanban"]
+    "management": ["figma", "git", "agileScrum", "kanban"]
   },
   "secondaryStack": [
     "storybook",
@@ -25,6 +25,7 @@
     "bitbucket",
     "jira",
     "docker",
-    "rtl"
+    "rtl",
+    "cordoba"
   ]
 }

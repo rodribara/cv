@@ -9,7 +9,7 @@
       "roleStack": {
         "frontend": ["typescript", "nextjs", "redux", "shopify", "cordoba"],
         "backend": ["nodejs", "postgreSQL", "nextjs", "redux"],
-        "management": ["react", "typescript", "nextjs", "redux"],
+        "management": ["git", "jira", "bitbucket"],
         "experienceType": "freelance"
       }
     },
