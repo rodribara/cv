@@ -6,24 +6,19 @@ export interface TechnologyListProps {
   title: string;
   techs: TechIconKey[];
 }
+
 const { title, techs } = Astro.props as TechnologyListProps;
 ---
 
-<div class="flex justify-center items-center flex-col align-bottom">
+<div class="flex md:justify-center sm:justify-start items-center flex-col mx-7">
   <h4 class="text-3xl font-medium" aria-label={title} aria-labelledby={title}>
     {title}
   </h4>
-  <ul
-    class="inline-flex flex-wrap gap-6 flex-row justify-center m-2 items-end mx-20"
-  >
+  <ul class="inline-flex flex-wrap gap-2 flex-col justify-center">
     {
       techs.map((tech, index) => (
-        <li key={index} class="flex justify-center flex-col gap-4">
-          <Image
-            src={techIcon[tech].icon}
-            alt={tech}
-            class="w-24 self-center"
-          />
+        <li key={index} class="flex justify-start flex-row gap-2">
+          <Image src={techIcon[tech].icon} alt={tech} class="w-4 self-center" />
           <p>.{tech}</p>
         </li>
       ))

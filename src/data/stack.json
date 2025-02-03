@@ -1,46 +1,30 @@
 {
   "mainStack": {
     "frontend": [
-      {
-        "name": "Javascript",
-        "icon": "js"
-      },
-      {
-        "name": "React",
-        "icon": "react"
-      },
-      { "name": "TypeScript", "icon": "typescript" },
-      { "name": "Next.js", "icon": "nextjs" },
-      { "name": "Redux", "icon": "redux" },
-      {
-        "name": "React Native",
-        "icon": "reactNative"
-      },
-      { "name": "TailwindCSS", "icon": "tailwindCSS" }
+      "js",
+      "react",
+      "nextjs",
+      "redux",
+      "shopify",
+      "reactNative",
+      "typescript",
+      "tailwindCSS",
+      "mui"
     ],
-    "backend": [
-      { "name": "Node.js", "icon": "nodejs" },
-      { "name": "Express", "icon": "express" },
-      { "name": "PostgreSQL", "icon": "postgreSQL" },
-      { "name": "MongoDB", "icon": "mongoDB" }
-    ],
-    "management": [
-      { "name": "Agile Scrum", "icon": "agileScrum" },
-      { "name": "Git", "icon": "git" },
-      { "name": "Kanban", "icon": "kanban" }
-    ]
+    "backend": ["nodejs", "express", "postgreSQL", "mongoDB"],
+    "management": ["agileScrum", "git", "kanban"]
   },
   "secondaryStack": [
-    { "name": "Storybook", "icon": "storybook" },
-    { "name": "Vue", "icon": "vue" },
-    { "name": "PHP", "icon": "php" },
-    { "name": "Retool", "icon": "retool" },
-    { "name": "Cloudflare", "icon": "cloudflare" },
-    { "name": "Github", "icon": "github" },
-    { "name": "Gitlab", "icon": "gitlab" },
-    { "name": "Bitbucket", "icon": "bitbucket" },
-    { "name": "Jira", "icon": "jira" },
-    { "name": "Docker", "icon": "docker" },
-    { "name": "React Testing Library", "icon": "rtl" }
+    "storybook",
+    "vue",
+    "php",
+    "retool",
+    "cloudflare",
+    "github",
+    "gitlab",
+    "bitbucket",
+    "jira",
+    "docker",
+    "rtl"
   ]
 }
