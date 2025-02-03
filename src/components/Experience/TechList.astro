@@ -10,9 +10,7 @@ export interface TechnologyListProps {
 const { title, techs } = Astro.props as TechnologyListProps;
 ---
 
-<div
-  class="flex md:justify-center sm:justify-start items-center flex-col mx-7 border border-amber-700"
->
+<div class="flex md:justify-center sm:justify-start items-center flex-col mx-7">
   <h4 class="text-3xl font-medium" aria-label={title} aria-labelledby={title}>
     {title}
   </h4>

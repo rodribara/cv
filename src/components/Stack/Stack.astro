@@ -9,9 +9,7 @@ export interface TechnologyListProps {
 const { title, techs } = Astro.props as TechnologyListProps;
 ---
 
-<div
-  class="flex justify-center items-center flex-col align-bottom border border-orange-700"
->
+<div class="flex justify-center items-center flex-col align-bottom">
   <h4 class="text-3xl font-medium" aria-label={title} aria-labelledby={title}>
     {title}
   </h4>
@@ -20,7 +18,7 @@ const { title, techs } = Astro.props as TechnologyListProps;
   >
     {
       techs.map((tech) => (
-        <li class="flex justify-center flex-col gap-4">
+        <li class="flex justify-center flex-col items-center gap-4">
           <Image src={techIcon[tech].icon} alt={tech} class="w-24" />
           <p>.{techIcon[tech].name}</p>
         </li>

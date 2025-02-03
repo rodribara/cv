@@ -6,9 +6,10 @@
       "nextjs",
       "redux",
       "shopify",
-      "reactNative",
       "typescript",
       "tailwindCSS",
+      "expo",
+      "reactNative",
       "mui"
     ],
     "backend": ["nodejs", "express", "postgreSQL", "mongoDB"],
