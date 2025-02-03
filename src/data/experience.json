@@ -53,6 +53,26 @@
       }
     },
     {
+      "logo": "kyosk",
+      "name": "Local Freelance Project",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "Developed a web and mobile application enabling writers and scriptwriters to create, update, and share their projects with publishers for feedback and approval.\nDesigned and implemented a specialized system for graphic novel scriptwriters, allowing them to format and present content distinct from traditional writing.\nOptimized the collaboration workflow, ensuring seamless communication between creators and publishers.",
+      "roleStack": {
+        "frontend": [
+          "reactNative",
+          "expo",
+          "typescript",
+          "tailwindCSS",
+          "tamagui",
+          "nextjs"
+        ],
+        "backend": ["mongoDB", "payload", "nodejs", "redux"],
+        "management": ["jira", "cloudflare"],
+        "experienceType": "freelance"
+      }
+    },
+    {
       "logo": "freelance",
       "name": "Local Freelance Project",
       "organization": "Local Freelance",
