@@ -1,0 +1,21 @@
+---
+import TechList from "./TechList.astro";
+
+export interface RoleStackProps {
+  roleStack: { frontend: string[]; backend: string[]; management: string[] };
+}
+
+const {
+  roleStack: { frontend, backend, management },
+} = Astro.props as RoleStackProps;
+---
+
+<div class="flex flex-col items-center m-3.5 w-full md:w-1/2">
+  <div
+    class="flex flex-row md:flex-col md:items-center justify-around w-full sm:items-start flex-wrap sm:gap-10"
+  >
+    <TechList title="front.end" techs={frontend} />
+    <TechList title="back.end" techs={backend} />
+    <TechList title="management" techs={management} />
+  </div>
+</div>

@@ -2,7 +2,8 @@
 import Js from "../assets/icons/js.png";
 import reactIcon from "../assets/icons/react.png";
 import typescriptIcon from "../assets/icons/typescript.png";
-import nextjsIcon from "../assets/icons/nextjs.png";
+import nextjsIcon from "../assets/icons/nextjs.svg";
+import cordoba from "../assets/icons/cordoba.png";
 import rtkIcon from "../assets/icons/RTK.png";
 import reactNativeIcon from "../assets/icons/react-native.svg";
 import tailwindIcon from "../assets/icons/tailwind.png";
@@ -23,33 +24,41 @@ import bitbucketIcon from "../assets/icons/bitbucket.webp";
 import jiraIcon from "../assets/icons/jira.png";
 import dockerIcon from "../assets/icons/docker-logo.svg";
 import gitIcon from "../assets/icons/Git.png";
+import mui from "../assets/icons/mui.png";
 import RTL from "../assets/icons/RTL.webp";
+import shopify from "../assets/icons/shopify.svg";
+import rqIcon from "../assets/icons/RQ.png";
 
 export const techIcon = {
-  js: Js,
-  git: gitIcon,
-  react: reactIcon,
-  typescript: typescriptIcon,
-  nextjs: nextjsIcon,
-  redux: rtkIcon,
-  reactNative: reactNativeIcon,
-  tailwindCSS: tailwindIcon,
-  nodejs: nodejsIcon,
-  express: expressjsIcon,
-  postgreSQL: postgresqlIcon,
-  mongoDB: mongodbIcon,
-  agileScrum: agileIcon,
-  kanban: kanbanIcon,
-  storybook: storybookIcon,
-  vue: vueIcon,
-  php: phpIcon,
-  retool: retoolIcon,
-  cloudflare: cloudflareIcon,
-  github: githubIcon,
-  gitlab: gitlabIcon,
-  bitbucket: bitbucketIcon,
-  jira: jiraIcon,
-  docker: dockerIcon,
-  rtl: RTL,
+  js: { name: "Javascript", icon: Js },
+  react: { name: "React", icon: reactIcon },
+  typescript: { name: "TypeScript", icon: typescriptIcon },
+  nextjs: { name: "Next.js", icon: nextjsIcon },
+  cordoba: { name: "Cordoba", icon: cordoba },
+  redux: { name: "Redux", icon: rtkIcon },
+  reactNative: { name: "React Native", icon: reactNativeIcon },
+  tailwindCSS: { name: "TailwindCSS", icon: tailwindIcon },
+  nodejs: { name: "Node.js", icon: nodejsIcon },
+  express: { name: "Express", icon: expressjsIcon },
+  postgreSQL: { name: "PostgreSQL", icon: postgresqlIcon },
+  mongoDB: { name: "MongoDB", icon: mongodbIcon },
+  agileScrum: { name: "Agile Scrum", icon: agileIcon },
+  kanban: { name: "Kanban", icon: kanbanIcon },
+  storybook: { name: "Storybook", icon: storybookIcon },
+  vue: { name: "Vue", icon: vueIcon },
+  php: { name: "PHP", icon: phpIcon },
+  retool: { name: "Retool", icon: retoolIcon },
+  cloudflare: { name: "Cloudflare", icon: cloudflareIcon },
+  github: { name: "Github", icon: githubIcon },
+  gitlab: { name: "Gitlab", icon: gitlabIcon },
+  bitbucket: { name: "Bitbucket", icon: bitbucketIcon },
+  jira: { name: "Jira", icon: jiraIcon },
+  docker: { name: "Docker", icon: dockerIcon },
+  git: { name: "Git", icon: gitIcon },
+  mui: { name: "Material UI", icon: mui },
+  rtl: { name: "react testing library", icon: RTL },
+  shopify: { name: "Shopify", icon: shopify },
+  rq: { name: "React Query", icon: rqIcon },
 };
+export type TechIconKey = keyof typeof techIcon;
 ---

@@ -1,14 +1,14 @@
 ---
 import Divider from "../Divider.astro";
 import ExperienceDetails from "./ExperienceDetails.astro";
-import RoleDescription from "./RoleDescription.astro";
+import RoleStack from "./RoleStack.astro";
 
 export interface ExperienceProps {
   image: string;
   name: string;
   organization: string;
   mainRole: string;
-  roleDescription: {
+  roleStack: {
     frontend: string[];
     backend: string[];
     management: string[];
@@ -18,33 +18,14 @@ export interface ExperienceProps {
 }
 
 const {
-  experience: {
-    image,
-    name,
-    organization,
-    mainRole,
-    roleDescription: { frontend, backend, management },
-    description,
-    experienceType,
-  },
+  experience: { roleStack, ...experience },
 } = Astro.props as { experience: ExperienceProps };
 ---
 
 <div class="flex flex-col items-center">
   <div class="flex items-start flex-col md:flex-row">
-    <ExperienceDetails
-      image={image}
-      name={name}
-      organization={organization}
-      mainRole={mainRole}
-      experienceType={experienceType}
-      description={description}
-    />
-    <RoleDescription
-      frontend={frontend}
-      backend={backend}
-      management={management}
-    />
+    <ExperienceDetails experience={experience} />
+    <RoleStack roleStack={roleStack} />
   </div>
 </div>
 <Divider />
