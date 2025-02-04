@@ -1,24 +1,69 @@
 {
   "experiences": [
     {
-      "logo": "globaltask",
+      "logo": "kyosk",
+      "name": "React Native Developer",
+      "organization": "Local Freelance Project",
+      "mainRole": "full.stack developer",
+      "description": "Developed a web and mobile application enabling writers and scriptwriters to create, update, and share their projects with publishers for feedback and approval.\nDesigned and implemented a specialized system for graphic novel scriptwriters, allowing them to format and present content distinct from traditional writing.\nOptimized the collaboration workflow, ensuring seamless communication between creators and publishers.",
+      "roleStack": {
+        "frontend": [
+          "reactNative",
+          "expo",
+          "typescript",
+          "tailwindCSS",
+          "tamagui",
+          "nextjs",
+          "react"
+        ],
+        "backend": ["mongoDB", "payload", "nodejs", "redux"],
+        "management": ["jira", "cloudflare", "git", "github"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "logo": "thestartup",
       "name": "Local Freelance Project",
       "organization": "Local Freelance",
       "mainRole": "full.stack developer",
-      "description": "Revamped the UI and user flow of a Vue.js application, improving accessibility and design consistency.\nOverhauled the gift box creation process, optimizing the step-by-step interface and backend interactions.\nWorked within a CMS-like environment, ensuring smooth content updates and scalable architecture.\nEngaged in agile development with an English-speaking team, collaborating on features and performance optimizations. \n Designed and developed a React Native app for employees to declare corporate credit card expenses.\nImplemented a receipt photo upload feature, allowing users to attach images for company review.\nEnsured smooth data synchronization and API integration for real-time expense tracking.\nFocused on a responsive and intuitive UI, improving usability and accessibility.",
+      "description": "Led a UI overhaul, modernizing the platform’s design, improving responsiveness, and enhancing the overall user experience.\nDeveloped and integrated a new user hub, allowing users to connect, request guidance, and access economic incentives.\nUpdated and optimized API endpoints to ensure seamless communication between frontend and backend services.\nWorked closely with an English-speaking team, contributing to agile development, UI/UX decisions, and performance improvements.",
       "roleStack": {
         "frontend": [
-          "vue",
-          "typescript",
           "react",
+          "typescript",
           "nextjs",
           "redux",
-          "shopify",
-          "cordoba",
-          "php"
+          "mui",
+          "tailwindCSS"
         ],
-        "backend": ["postgreSQL", "nextjs", "redux"],
-        "management": ["git", "jira", "bitbucket", "github"],
+        "backend": ["nodejs", "express", "postgreSQL"],
+        "management": ["jira", "git", "github"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "logo": "freelance",
+      "name": "Shopify Developer",
+      "organization": "Local Freelance",
+      "mainRole": "frontend.stack developer",
+      "description": "Developed and maintained multiple Shopify-based e-commerce websites, implementing new features and improving existing functionality.\nDesigned and integrated new sections to enhance user experience and optimize conversion rates.\nLed UI/UX redesigns, modernizing storefronts while ensuring consistency with brand identity.\nExpanded site capabilities by customizing Shopify themes, Liquid templates, and third-party app integrations to meet business needs.",
+      "roleStack": {
+        "frontend": ["shopify"],
+        "backend": [],
+        "management": ["kanban"],
+        "experienceType": "freelance"
+      }
+    },
+    {
+      "logo": "globallogic",
+      "name": "Streaming Platform",
+      "organization": "Local Freelance",
+      "mainRole": "full.stack developer",
+      "description": "Developed and maintained a Next.js-based streaming platform using a micro-frontend architecture, ensuring modular and scalable code.\nImplemented new pages and features, optimized existing ones, and enhanced the manifest schema to improve content delivery and user experience.\nCollaborated with a multinational, English-speaking team, actively participating in discussions, code reviews, and agile development processes.\nContributed to performance optimizations and UI improvements, ensuring seamless streaming experiences across devices.",
+      "roleStack": {
+        "frontend": ["react", "typescript", "nextjs"],
+        "backend": ["nodejs"],
+        "management": ["git", "bitbucket", "kanban"],
         "experienceType": "freelance"
       }
     },
@@ -45,69 +90,24 @@
       }
     },
     {
-      "logo": "thestartup",
+      "logo": "globaltask",
       "name": "Local Freelance Project",
       "organization": "Local Freelance",
       "mainRole": "full.stack developer",
-      "description": "Led a UI overhaul, modernizing the platform’s design, improving responsiveness, and enhancing the overall user experience.\nDeveloped and integrated a new user hub, allowing users to connect, request guidance, and access economic incentives.\nUpdated and optimized API endpoints to ensure seamless communication between frontend and backend services.\nWorked closely with an English-speaking team, contributing to agile development, UI/UX decisions, and performance improvements.",
+      "description": "Revamped the UI and user flow of a Vue.js application, improving accessibility and design consistency.\nOverhauled the gift box creation process, optimizing the step-by-step interface and backend interactions.\nWorked within a CMS-like environment, ensuring smooth content updates and scalable architecture.\nEngaged in agile development with an English-speaking team, collaborating on features and performance optimizations. \n Designed and developed a React Native app for employees to declare corporate credit card expenses.\nImplemented a receipt photo upload feature, allowing users to attach images for company review.\nEnsured smooth data synchronization and API integration for real-time expense tracking.\nFocused on a responsive and intuitive UI, improving usability and accessibility.",
       "roleStack": {
         "frontend": [
-          "react",
+          "vue",
           "typescript",
+          "react",
           "nextjs",
           "redux",
-          "mui",
-          "tailwindCSS"
+          "shopify",
+          "cordoba",
+          "php"
         ],
-        "backend": ["nodejs", "express", "postgreSQL"],
-        "management": ["jira", "git", "github"],
-        "experienceType": "freelance"
-      }
-    },
-    {
-      "logo": "globallogic",
-      "name": "Streaming Platform",
-      "organization": "Local Freelance",
-      "mainRole": "full.stack developer",
-      "description": "Developed and maintained a Next.js-based streaming platform using a micro-frontend architecture, ensuring modular and scalable code.\nImplemented new pages and features, optimized existing ones, and enhanced the manifest schema to improve content delivery and user experience.\nCollaborated with a multinational, English-speaking team, actively participating in discussions, code reviews, and agile development processes.\nContributed to performance optimizations and UI improvements, ensuring seamless streaming experiences across devices.",
-      "roleStack": {
-        "frontend": ["react", "typescript", "nextjs"],
-        "backend": ["nodejs"],
-        "management": ["git", "bitbucket", "kanban"],
-        "experienceType": "freelance"
-      }
-    },
-    {
-      "logo": "kyosk",
-      "name": "React Native Developer",
-      "organization": "Local Freelance Project",
-      "mainRole": "full.stack developer",
-      "description": "Developed a web and mobile application enabling writers and scriptwriters to create, update, and share their projects with publishers for feedback and approval.\nDesigned and implemented a specialized system for graphic novel scriptwriters, allowing them to format and present content distinct from traditional writing.\nOptimized the collaboration workflow, ensuring seamless communication between creators and publishers.",
-      "roleStack": {
-        "frontend": [
-          "reactNative",
-          "expo",
-          "typescript",
-          "tailwindCSS",
-          "tamagui",
-          "nextjs",
-          "react"
-        ],
-        "backend": ["mongoDB", "payload", "nodejs", "redux"],
-        "management": ["jira", "cloudflare", "git", "github"],
-        "experienceType": "freelance"
-      }
-    },
-    {
-      "logo": "freelance",
-      "name": "Shopify Developer",
-      "organization": "Local Freelance",
-      "mainRole": "frontend.stack developer",
-      "description": "Developed and maintained multiple Shopify-based e-commerce websites, implementing new features and improving existing functionality.\nDesigned and integrated new sections to enhance user experience and optimize conversion rates.\nLed UI/UX redesigns, modernizing storefronts while ensuring consistency with brand identity.\nExpanded site capabilities by customizing Shopify themes, Liquid templates, and third-party app integrations to meet business needs.",
-      "roleStack": {
-        "frontend": ["shopify"],
-        "backend": [],
-        "management": ["kanban"],
+        "backend": ["postgreSQL", "nextjs", "redux"],
+        "management": ["git", "jira", "bitbucket", "github"],
         "experienceType": "freelance"
       }
     }
