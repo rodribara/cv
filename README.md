@@ -9,6 +9,8 @@ I chose Astro as this is a static page, and Next.js would be an overkill.
 - Astro
 - tailwind
 
+## How to run
+
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
