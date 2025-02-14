@@ -6,11 +6,13 @@ import StackSection from "../components/StackSection.astro";
 import "../style/global.css";
 import HireHimAlready from "../components/HireHimAlready.astro";
 import CoverLetter from "@components/CoverLetter.astro";
+import ThreeSection from "@components/ThreeSection.vue";
 ---
 
 <Layout>
   <Header />
   <CoverLetter />
+  <ThreeSection client:load />
   <HireHimAlready title="Hire Now" />
   <StackSection />
 
