@@ -10,19 +10,13 @@
   ],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
+    "strictNullChecks": true,
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@data/*": ["src/data/*"]
-    },
-    "jsx": "preserve",
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    }
   }
 }
