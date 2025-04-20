@@ -32,6 +32,10 @@
     "retool",
     "cloudflare",
     "rtl",
-    "cordoba"
+    "cordoba",
+    "supa",
+    "prisma",
+    "cypress",
+    "shadcn"
   ]
 }
