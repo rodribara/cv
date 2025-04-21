@@ -12,7 +12,7 @@
       "reactNative",
       "mui"
     ],
-    "backend": ["nodejs", "express", "postgreSQL", "mongoDB"],
+    "backend": ["nodejs", "express", "postgreSQL", "mongoDB", "nest"],
     "management": [
       "figma",
       "git",
