@@ -1,0 +1,20 @@
+---
+export interface NavProps {
+  name: string;
+  image: string;
+  variant: "pink" | "green" | "black";
+}
+
+const { name, variant } = Astro.props as NavProps;
+
+const variantClasses = {
+  pink: { bg: "bg-[#FE5980]", text: "text-[#373737]" },
+  black: { bg: "bg-[#373737]", text: "text-white" },
+  green: { bg: "bg-[#14B8A6]", text: "text-[#373737]" },
+}[variant] || { bg: "bg-[#FE5980]", text: "text-[#373737]" };
+---
+
+<div class={`rounded-md ${variantClasses.bg} p-2 w-full h-full items-end flex`}>
+  <div><p class={`text-[20px] rounded-full ${variantClasses.text}`}>01</p></div>
+  <p class={`text-2xl italic font-semibold ${variantClasses.text}`}>{name}</p>
+</div>
