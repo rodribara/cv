@@ -1,0 +1,5 @@
+- [ ] add new jobs (brow)
+- [ ] check on how to make them scroll until a certain point.(brow)
+- [ ] delete old design
+- [ ] add backdrop
+- [ ]
