@@ -1,19 +1,24 @@
 ---
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
-import ExperienceSection from "../components/ExperienceSection.astro";
-import StackSection from "../components/StackSection.astro";
-import "../style/global.css";
-import HireHimAlready from "../components/HireHimAlready.astro";
+import Container from "@components/Container";
 import CoverLetter from "@components/CoverLetter.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import Header from "../components/Header.astro";
+import HireHimAlready from "../components/HireHimAlready.astro";
+import StackSection from "../components/StackSection.astro";
+import Layout from "../layouts/Layout.astro";
+import "../style/global.css";
 ---
 
 <Layout>
-  <Header />
-  <CoverLetter />
-  <HireHimAlready title="Hire Now" />
-  <StackSection />
+  <Container
+    ><!-- 
+    <img src="/src/assets/title.png" /> -->
+    <Header />
+    <CoverLetter />
+    <HireHimAlready title="Hire Now" />
+    <StackSection />
 
-  <ExperienceSection />
-  <HireHimAlready title="Get a Quote" />
+    <ExperienceSection />
+    <HireHimAlready title="Get a Quote" />
+  </Container>
 </Layout>
