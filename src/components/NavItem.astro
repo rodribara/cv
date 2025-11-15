@@ -14,7 +14,9 @@ const variantClasses = {
 }[variant] || { bg: "bg-[#FE5980]", text: "text-[#373737]" };
 ---
 
-<div class={`rounded-md ${variantClasses.bg} p-2 w-full h-full items-end flex`}>
+<div
+  class={`rounded-md ${variantClasses.bg} hover:${variantClasses.bg}/50 p-2 w-full h-full items-end flex`}
+>
   <div><p class={`text-[20px] rounded-full ${variantClasses.text}`}>01</p></div>
   <p class={`text-2xl italic font-semibold ${variantClasses.text}`}>{name}</p>
 </div>
