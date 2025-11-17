@@ -14,13 +14,13 @@ import NavItem from "@components/NavItem.astro";
   <body>
     <div class="flex min-h-screen w-full flex-col">
       <main
-        class="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col items-center gap-4 bg-muted/40 p-4 md:gap-8 md:p-10"
+        class="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col justify-center items-center gap-4 bg-muted/40 md:gap-8"
       >
         <slot />
       </main>
     </div>
     <nav
-      class="fixed bottom-0 bg-white/60 left-0 right-0 gap-2 p-2 flex h-16 items-center justify-around border-t bg-background shadow-md lg:bottom-auto lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-52 lg:flex-col"
+      class="fixed overflow-x-scroll bottom-0 bg-white/60 left-0 right-0 gap-2 p-2 flex h-16 items-center justify-around border-t bg-background shadow-md lg:bottom-auto lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-52 lg:flex-col"
     >
       <NavItem variant="pink" name="Profile" />
       <NavItem variant="black" name="Stack" />
@@ -28,27 +28,6 @@ import NavItem from "@components/NavItem.astro";
       <NavItem variant="pink" name="Experience" />
       <NavItem variant="black" name="Portfolio" />
     </nav>
-
-    <style>
-      :global(.swiper) {
-        width: 100%;
-        padding: 20px 0;
-      }
-
-      :global(.swiper-wrapper) {
-        display: flex;
-        flex-direction: row;
-      }
-
-      :global(.swiper-slide) {
-        width: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
-
-    <script></script>
   </body>
 </html>
 

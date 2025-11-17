@@ -11,26 +11,38 @@ import Stack from "./Stack/Stack.astro";
   <div class="flex flex-col items-center justify-center gap-9">
     <div class="flex flex-col items-start justify-start gap-9">
       <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="frontend">
+        <h3
+          class="text-3xl font-bold items-start w-fit bg-white/90 p-2 rounded-md"
+          aria-label="frontend"
+        >
           .frontend
         </h3>
         <Stack techs={stack.mainStack.frontend} />
       </div>
       <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="backend">
+        <h3
+          class="text-3xl font-bold items-start w-fit bg-white/90 p-2 rounded-md"
+          aria-label="backend"
+        >
           .backend
         </h3>
         <Stack techs={stack.mainStack.backend} />
       </div>
       <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="management">
+        <h3
+          class="text-3xl font-bold items-start w-fit bg-white/90 p-2 rounded-md"
+          aria-label="management"
+        >
           .management
         </h3>
         <Stack techs={stack.mainStack.management} />
       </div>
     </div>
     <div class="flex justify-center flex-col items-center gap-2">
-      <h3 class="text-3xl font-bold" aria-label="complementary stack">
+      <h3
+        class="text-3xl font-bold w-fit bg-white/90 p-2 rounded-md"
+        aria-label="complementary stack"
+      >
         complementary.stack
       </h3>
     </div>
@@ -50,5 +62,23 @@ import Stack from "./Stack/Stack.astro";
     border: none;
     height: 5px;
     background-color: #26273f;
+  }
+  /* wrapper height equals the distance you want the element to remain sticky */
+  .sticky-wrapper {
+    height: 800px; /* adjust to where you want it to stop */
+    position: relative;
+  }
+
+  .sticky-bg {
+    position: sticky;
+    top: 0;
+    z-index: -50;
+    opacity: 1;
+  }
+
+  .sticky-bg img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 </style>
