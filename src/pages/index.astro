@@ -10,80 +10,17 @@ import "../style/global.css";
 ---
 
 <Layout>
-  <div class="sticky-wrapper">
-    <div class="sticky-bg">
-      <img src="/src/assets/side-laptop.png" id="laptop" alt="laptop" />
-    </div>
-  </div>
-  <div class="sticky-wrapper items-center flex flex-col">
-    <div class="sticky-bg">
-      <img src="/src/assets/side-laptop.png" id="laptop" alt="laptop" />
-    </div>
-    <Container
-      ><!-- 
+  <Container
+    ><!-- 
     <img src="/src/assets/title.png" /> -->
-
-      <Header />
-    </Container>
-
-    <Container>
-      <CoverLetter />
-      <HireHimAlready title="Hire Now" />
-      <div class="sticky-wrapper">
-        <div class="sticky-bg">
-          <img src="/src/assets/chair.png" id="chair" alt="laptop" />
-        </div>
-        <StackSection />
-
-        <ExperienceSection />
-        <div class="sticky-wrapper-experience">
-          <div class="sticky-bg">
-            <img src="/src/assets/coffee.png" id="chair" alt="laptop" />
-          </div>
-          <HireHimAlready title="Get a Quote" />
-        </div>
-      </div>
-    </Container>
-    <style>
-      .sticky-wrapper {
-        height: 700px;
-        position: relative;
-
-        width: 100%;
-      }
-      .sticky-wrapper-experience {
-        height: 1800px;
-        position: relative;
-
-        width: 100%;
-      }
-
-      .sticky-bg {
-        position: sticky;
-        top: 0;
-        z-index: -50;
-        height: 0;
-        pointer-events: none;
-        overflow: visible;
-      }
-
-      .sticky-bg img {
-        position: absolute;
-        top: 0;
-        display: block;
-        width: 700px;
-        height: auto;
-      }
-      #laptop {
-        left: 0;
-      }
-      #chair {
-        right: 0;
-      }
-
-      #laptop2 {
-        right: 0;
-      }
-    </style>
-  </div>
+    <Header />
+    <CoverLetter />
+    <StackSection />
+    <ExperienceSection />
+    <HireHimAlready title="Get a Quote" />
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fe598030_1px,transparent_1px),linear-gradient(to_bottom,#fe598030_1px,transparent_1px)] bg-[size:14px_24px]"
+    >
+    </div>
+  </Container>
 </Layout>

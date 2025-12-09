@@ -1,7 +1,7 @@
 ---
-import Image from "astro/components/Image.astro";
-import { techIcon } from "@components/Icon.astro";
 import type { TechIconKey } from "@components/Icon.astro";
+import { techIcon } from "@components/Icon.astro";
+import Image from "astro/components/Image.astro";
 export interface TechnologyListProps {
   title: string;
   techs: TechIconKey[];
@@ -28,7 +28,7 @@ const { title, techs } = Astro.props as TechnologyListProps;
               alt={tech}
               class="w-4 self-center"
             />
-            <p>.{tech}</p>
+            <p>{tech}</p>
           </li>
         )
       )

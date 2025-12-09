@@ -6,21 +6,31 @@ import gitIconGreen from "../assets/icons/github-green.svg";
 import linkedin from "../assets/icons/linkedin.svg";
 ---
 
-<main>
-  <div class="gap-3 flex">
-    <a href="https://github.com/rodribara/" target="_blank">
-      <Image src={gitIconGreen} alt="" class="w-6" />
-    </a>
-    <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
-      <Image src={linkedin} alt="" class="w-6" />
-    </a>
+<main class="flex flex-col w-full">
+  <div
+    class="gap-3 flex pt-3 space-between items-center justify-between w-full"
+  >
+    <div class="flex gap-3 fade-in-up">
+      <a href="https://github.com/rodribara/" class="w-fit m-0" target="_blank">
+        <Image src={gitIconGreen} alt="" class="w-6" />
+      </a>
+      <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
+        <Image src={linkedin} alt="" class="w-6" />
+      </a>
+    </div>
+    <nav class="fade-in-up">
+      <a>Profile</a>
+      <a>Experiences</a>
+      <a>Stack</a>
+      <a>Portfolio</a>
+    </nav>
   </div>
   <header class="flex">
     <div
       class="flex justify-between align-middle flex-col-reverse md:flex-row md:gap-0"
     >
       <div
-        class="flex gap-36 self-center flex-col items-center bg-white/80 py-4 rounded-md"
+        class="fade-in-up flex gap-36 self-center flex-col items-center backdrop-blur-[0.8px] py-4 rounded-md"
       >
         <h1
           class="md:max-w-[630px] text-center w-full text-sm md:text-6xl sm:mt-5 leading-10"
@@ -32,7 +42,7 @@ import linkedin from "../assets/icons/linkedin.svg";
           <span class="role"> full.stack developer</span>
         </h1>
       </div>
-      <div class="flex justify-center items-center mb-20 md:mb-0">
+      <div class="fade-in-up flex justify-center items-center mb-20 md:mb-0">
         <Image
           src={profile}
           alt="Profile pic"

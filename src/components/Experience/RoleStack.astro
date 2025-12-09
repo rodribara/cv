@@ -14,11 +14,11 @@ const {
   <div
     class="flex flex-row md:flex-col md:items-center justify-around w-full sm:items-start flex-wrap sm:gap-10"
   >
-    {frontend.length > 0 && <TechList title="front.end" techs={frontend} />}
-    {backend.length > 0 && <TechList title="back.end" techs={backend} />}
+    {frontend.length > 0 && <TechList title="Frontend" techs={frontend} />}
+    {backend.length > 0 && <TechList title="Backend" techs={backend} />}
     {
       management.length > 0 && (
-        <TechList title="management" techs={management} />
+        <TechList title="Management" techs={management} />
       )
     }
   </div>
