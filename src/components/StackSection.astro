@@ -5,7 +5,7 @@ import Stack from "./Stack/Stack.astro";
 
 <main class="pb-10">
   <div class="flex justify-center flex-col items-center gap-2">
-    <h2 class="text-5xl font-bold" aria-label="stack">Stack</h2>
+    <h2 class="text-5xl font-bold" aria-label="stack" id="stack">Stack</h2>
     <hr class="horizontal-line h-1 w-12 rounded-md" />
   </div>
   <div class="flex flex-col items-center justify-between m-1">
@@ -28,8 +28,8 @@ import Stack from "./Stack/Stack.astro";
         </h3>
         <Stack techs={stack.mainStack.backend} />
       </div>
-      <!--       
-      <div class="flex justify-center flex-col items-center">
+
+      <div class="flex justify-center flex-col items-center fade-in-up">
         <h3
           class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
           aria-label="management"
@@ -37,8 +37,7 @@ import Stack from "./Stack/Stack.astro";
           Management
         </h3>
         <Stack techs={stack.mainStack.management} />
-      </div> 
-      -->
+      </div>
     </div>
     <div class="flex justify-center flex-col items-center fade-in-up gap-2">
       <h3
