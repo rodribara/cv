@@ -23,7 +23,12 @@ const { title, techs } = Astro.props as TechnologyListProps;
     {
       techs.map((tech) => (
         <li class="flex justify-end flex-col items-center gap-2 pb-1  rounded-md w-20 h-20 ">
-          <Image src={techIcon[tech].icon} alt={tech} class="w-10" />
+          <Image
+            draggable="false"
+            src={techIcon[tech].icon}
+            alt={tech}
+            class="w-10"
+          />
           <p class="text-xs">{techIcon[tech].name}</p>
         </li>
       ))

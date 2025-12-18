@@ -12,17 +12,17 @@ import linkedin from "../assets/icons/linkedin.svg";
   >
     <div class="flex gap-3 fade-in-up">
       <a href="https://github.com/rodribara/" class="w-fit m-0" target="_blank">
-        <Image src={gitIconGreen} alt="" class="w-6" />
+        <Image src={gitIconGreen} alt="" class="w-6" draggable="false" />
       </a>
       <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
-        <Image src={linkedin} alt="" class="w-6" />
+        <Image src={linkedin} alt="" draggable="false" class="w-6" />
       </a>
     </div>
     <nav class="fade-in-up">
-      <a href="#profile">Profile</a>
-      <a href="#stack">Stack</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#profile" class="backdrop-blur-[1px] p-1">Profile</a>
+      <a href="#stack" class="backdrop-blur-[1px] p-1">Stack</a>
+      <a href="#experiences" class="backdrop-blur-[1px] p-1">Experiences</a>
+      <a href="#portfolio" class="backdrop-blur-[1px] p-1">Portfolio</a>
     </nav>
   </div>
   <header class="flex">
@@ -40,7 +40,7 @@ import linkedin from "../assets/icons/linkedin.svg";
             class="text-pinkish subtitle">Rodrigo Atencio</span
           >,
           <span>a</span>
-          <span class="role"> full.stack developer</span>
+          <span class="role"> fullstack developer</span>
         </h1>
       </div>
       <div class="fade-in-up flex justify-center items-center mb-20 md:mb-0">
@@ -48,6 +48,7 @@ import linkedin from "../assets/icons/linkedin.svg";
           src={profile}
           alt="Profile pic"
           loading="eager"
+          draggable="false"
           class="profile-pic w-60 h-auto md:mr-6"
         />
       </div>
