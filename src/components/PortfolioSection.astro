@@ -1,0 +1,47 @@
+---
+import project from "../data/project.json";
+
+import elSemillero from "../assets/elsemillero.png";
+import kataproj from "../assets/katapic.png";
+import laEdicola from "../assets/laedico.png";
+import PortfolioStack from "./PortfolioStack/PortfolioStack.astro";
+
+/* #22d3ee */
+
+const { kataplunchis, laedicola, elsemillero } = project;
+---
+
+<div class="py-10 w-full">
+  <div class="flex justify-center flex-col items-center gap-2">
+    <h2
+      class="text-5xl font-bold backdrop-blur-[0.8px]"
+      aria-label="portfolio"
+      id="portfolio"
+    >
+      Portfolio
+    </h2>
+  </div>
+  <div class="flex flex-col items-center justify-between m-3 gap-3">
+    <PortfolioStack
+      title={"Kataplunchis"}
+      concept={"Comic Artist Page"}
+      description={"A web application for showcasing comic art and stories."}
+      tech={kataplunchis.frontend}
+      image={kataproj}
+    />
+    <PortfolioStack
+      title={"La Edícola"}
+      concept={"Comic Reading App (Beta)"}
+      description={"A web application for showcasing comic art and stories."}
+      tech={laedicola.frontend}
+      image={laEdicola}
+    />
+    <PortfolioStack
+      title={"El Semillero Club"}
+      concept={"Free Reading Argentine Graphic Novels"}
+      description={"A web application for showcasing comic art and stories."}
+      tech={project.kataplunchis.frontend}
+      image={elSemillero}
+    />
+  </div>
+</div>

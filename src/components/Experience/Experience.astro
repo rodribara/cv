@@ -1,5 +1,4 @@
 ---
-import Divider from "../Divider.astro";
 import ExperienceDetails from "./ExperienceDetails.astro";
 import RoleStack from "./RoleStack.astro";
 
@@ -22,10 +21,11 @@ const {
 } = Astro.props as { experience: ExperienceProps };
 ---
 
-<div class="flex flex-col items-center">
-  <div class="flex items-start flex-col md:flex-row">
+<div class="flex flex-col items-center fade-in-up">
+  <div
+    class="flex items-start flex-col md:flex-row border border-[#14b8a6] mx-3 rounded-2xl w-fit backdrop-blur-[0.6px]"
+  >
     <ExperienceDetails experience={experience} />
     <RoleStack roleStack={roleStack} />
   </div>
 </div>
-<Divider />

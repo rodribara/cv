@@ -3,35 +3,53 @@ import stack from "../data/stack.json";
 import Stack from "./Stack/Stack.astro";
 ---
 
-<main class="pb-20">
+<main class="py-10">
   <div class="flex justify-center flex-col items-center gap-2">
-    <h2 class="text-5xl font-bold" aria-label="main stack">main.stack</h2>
-    <hr class="horizontal-line h-1 w-12 rounded-md" />
+    <h2
+      class="text-5xl font-bold backdrop-blur-[0.8px]"
+      aria-label="stack"
+      id="stack"
+    >
+      Stack
+    </h2>
   </div>
-  <div class="flex flex-col items-center justify-center gap-9">
-    <div class="flex flex-col items-start justify-start gap-9">
-      <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="frontend">
-          .frontend
+  <div class="flex flex-col items-center justify-between m-1">
+    <div class="flex flex-col md:flex-row items-start justify-between">
+      <div class="flex justify-center flex-col items-center fade-in-up">
+        <h3
+          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
+          aria-label="frontend"
+        >
+          Frontend
         </h3>
         <Stack techs={stack.mainStack.frontend} />
       </div>
-      <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="backend">
-          .backend
+      <div class="flex justify-center flex-col items-center fade-in-up">
+        <h3
+          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
+          aria-label="backend"
+        >
+          Backend
         </h3>
         <Stack techs={stack.mainStack.backend} />
       </div>
-      <div>
-        <h3 class="text-3xl font-bold items-start" aria-label="management">
-          .management
+
+      <div class="flex justify-center flex-col items-center fade-in-up">
+        <h3
+          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
+          aria-label="management"
+        >
+          Management
         </h3>
         <Stack techs={stack.mainStack.management} />
       </div>
     </div>
-    <div class="flex justify-center flex-col items-center gap-2">
-      <h3 class="text-3xl font-bold" aria-label="complementary stack">
-        complementary.stack
+    <div class="flex justify-center flex-col items-center fade-in-up gap-2">
+      <h3
+        class="text-3xl font-bold w-fit backdrop-blur-[0.8px] p-2 rounded-md"
+        aria-label="complementary stack"
+      >
+        Complementary Stack
       </h3>
     </div>
     <div class="flex flex-col items-center justify-center gap-9">
@@ -43,12 +61,3 @@ import Stack from "./Stack/Stack.astro";
     </div>
   </div>
 </main>
-
-<style>
-  .horizontal-line {
-    color: #26273f;
-    border: none;
-    height: 5px;
-    background-color: #26273f;
-  }
-</style>

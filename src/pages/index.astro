@@ -1,6 +1,7 @@
 ---
-import Container from "@components/Container";
+import Container from "@components/Container.astro";
 import CoverLetter from "@components/CoverLetter.astro";
+import PortfolioSection from "@components/PortfolioSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
 import Header from "../components/Header.astro";
 import HireHimAlready from "../components/HireHimAlready.astro";
@@ -15,10 +16,13 @@ import "../style/global.css";
     <img src="/src/assets/title.png" /> -->
     <Header />
     <CoverLetter />
-    <HireHimAlready title="Hire Now" />
     <StackSection />
-
     <ExperienceSection />
+    <PortfolioSection />
     <HireHimAlready title="Get a Quote" />
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fe598030_1px,transparent_1px),linear-gradient(to_bottom,#fe598030_1px,transparent_1px)] bg-[size:14px_24px]"
+    >
+    </div>
   </Container>
 </Layout>

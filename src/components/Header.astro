@@ -6,20 +6,33 @@ import gitIconGreen from "../assets/icons/github-green.svg";
 import linkedin from "../assets/icons/linkedin.svg";
 ---
 
-<main>
-  <div class="gap-3 flex">
-    <a href="https://github.com/rodribara/" target="_blank">
-      <Image src={gitIconGreen} alt="" class="w-6" />
-    </a>
-    <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
-      <Image src={linkedin} alt="" class="w-6" />
-    </a>
+<main class="flex flex-col w-full">
+  <div
+    class="gap-3 flex pt-3 space-between items-center justify-between w-full"
+  >
+    <div class="flex gap-3 fade-in-up">
+      <a href="https://github.com/rodribara/" class="w-fit m-0" target="_blank">
+        <Image src={gitIconGreen} alt="" class="w-6" draggable="false" />
+      </a>
+      <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
+        <Image src={linkedin} alt="" draggable="false" class="w-6" />
+      </a>
+    </div>
+    <nav class="fade-in-up">
+      <a href="#profile" class="backdrop-blur-[1px] p-1">Profile</a>
+      <a href="#stack" class="backdrop-blur-[1px] p-1">Stack</a>
+      <a href="#experiences" class="backdrop-blur-[1px] p-1">Experiences</a>
+      <a href="#portfolio" class="backdrop-blur-[1px] p-1">Portfolio</a>
+    </nav>
   </div>
   <header class="flex">
     <div
       class="flex justify-between align-middle flex-col-reverse md:flex-row md:gap-0"
+      id="profile"
     >
-      <div class="flex gap-36 self-center flex-col items-center">
+      <div
+        class="fade-in-up flex gap-36 self-center flex-col items-center backdrop-blur-[0.8px] py-4 rounded-md"
+      >
         <h1
           class="md:max-w-[630px] text-center w-full text-sm md:text-6xl sm:mt-5 leading-10"
         >
@@ -27,21 +40,19 @@ import linkedin from "../assets/icons/linkedin.svg";
             class="text-pinkish subtitle">Rodrigo Atencio</span
           >,
           <span>a</span>
-          <span class="role"> full.stack developer</span>
+          <span class="role"> fullstack developer</span>
         </h1>
       </div>
-      <div class="flex justify-center items-center mb-20 md:mb-0">
+      <div class="fade-in-up flex justify-center items-center mb-20 md:mb-0">
         <Image
           src={profile}
           alt="Profile pic"
           loading="eager"
+          draggable="false"
           class="profile-pic w-60 h-auto md:mr-6"
         />
       </div>
     </div>
-    <!--   <div class="absolute left-0 top-0 w-full h-full opacity-100 -z-50">
-      <img src="/src/assets/side-laptop.png" alt="" class="" /> laptop
-    </div> -->
   </header>
 
   <style>
