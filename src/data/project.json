@@ -1,15 +1,16 @@
 {
   "kataplunchis": {
-    "frontend": ["astro", "react", "typescript", "tailwindCSS"]
+    "frontend": ["astro", "react", "typescript", "tailwindCSS", "figma"]
   },
   "elsemillero": {
-    "frontend": ["astro", "react", "typescript", "tailwindCSS"]
+    "frontend": ["astro", "react", "typescript", "tailwindCSS", "figma"]
   },
   "laedicola": {
     "frontend": [
       "nextjs",
       "react",
       "typescript",
+      "figma",
       "tailwindCSS",
       "postgreSQL",
       "supa"
