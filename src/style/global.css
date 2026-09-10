@@ -1,17 +1,22 @@
 @import "./fonts.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+@theme {
+  --color-dark-blue: #26273f;
+  --color-pinkish: #fe5980;
+  --color-damascus: #ff6464;
+  --color-onyx: #373737;
+}
 
 body {
-  @apply text-[#373737];
+  @apply text-onyx;
   font-family: "Inter", sans-serif;
 }
 a {
   margin: 0 0.5rem;
   font-weight: 200;
   text-decoration: none;
-  @apply text-[#373737];
+  @apply text-onyx;
 }
 .fade-in-up {
   animation: fadeInUp 0.8s ease forwards;
