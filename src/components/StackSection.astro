@@ -1,63 +1,109 @@
 ---
+import experience from "../data/experience.json";
+import project from "../data/project.json";
 import stack from "../data/stack.json";
+import Section from "./Section.astro";
 import Stack from "./Stack/Stack.astro";
+
+const groups = [
+  { title: "Frontend", techs: stack.mainStack.frontend },
+  { title: "Backend", techs: stack.mainStack.backend },
+  { title: "Management", techs: stack.mainStack.management },
+];
+
+// tiles for techs outside these roles and projects render disabled
+const usedTechs = new Set<string>([
+  ...experience.experiences.flatMap(({ roleStack }) => [
+    ...roleStack.frontend,
+    ...roleStack.backend,
+    ...roleStack.management,
+  ]),
+  ...Object.values(project).flatMap(({ frontend }) => frontend),
+]);
 ---
 
-<main class="py-10">
-  <div class="flex justify-center flex-col items-center gap-2">
-    <h2
-      class="text-5xl font-bold backdrop-blur-[0.8px]"
-      aria-label="stack"
-      id="stack"
-    >
-      Stack
-    </h2>
-  </div>
-  <div class="flex flex-col items-center justify-between m-1">
-    <div class="flex flex-col md:flex-row items-start justify-between">
-      <div class="flex justify-center flex-col items-center fade-in-up">
-        <h3
-          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
-          aria-label="frontend"
-        >
-          Frontend
-        </h3>
-        <Stack techs={stack.mainStack.frontend} />
-      </div>
-      <div class="flex justify-center flex-col items-center fade-in-up">
-        <h3
-          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
-          aria-label="backend"
-        >
-          Backend
-        </h3>
-        <Stack techs={stack.mainStack.backend} />
-      </div>
-
-      <div class="flex justify-center flex-col items-center fade-in-up">
-        <h3
-          class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
-          aria-label="management"
-        >
-          Management
-        </h3>
-        <Stack techs={stack.mainStack.management} />
-      </div>
-    </div>
-    <div class="flex justify-center flex-col items-center fade-in-up gap-2">
-      <h3
-        class="text-3xl font-bold w-fit backdrop-blur-[0.8px] p-2 rounded-md"
-        aria-label="complementary stack"
-      >
-        Complementary Stack
-      </h3>
-    </div>
-    <div class="flex flex-col items-center justify-center gap-9">
-      <div class="flex flex-col items-start justify-start gap-9">
-        <div class="flex flex-col items-center">
-          <Stack techs={stack.secondaryStack} />
+<Section id="stack" title="Stack">
+  <p class="-mt-3 text-sm text-muted">
+    Click a technology to see where I used it.
+  </p>
+  <div class="grid gap-6 md:grid-cols-3">
+    {
+      groups.map(({ title, techs }) => (
+        <div class="fade-in-up flex flex-col gap-3">
+          <h3 class="text-lg font-extrabold">{title}</h3>
+          <Stack techs={techs} usedTechs={usedTechs} />
         </div>
-      </div>
-    </div>
+      ))
+    }
   </div>
-</main>
+  <div class="fade-in-up flex flex-col gap-3">
+    <h3 class="text-lg font-extrabold">Complementary stack</h3>
+    <Stack techs={stack.secondaryStack} usedTechs={usedTechs} />
+  </div>
+  <div
+    data-tech-status
+    role="status"
+    hidden
+    class="fixed inset-x-4 bottom-4 z-20 mx-auto flex w-fit items-center gap-3 rounded-full border border-line bg-white py-2 pr-2 pl-4 text-sm shadow-[0_8px_24px_#2b2a3020]"
+  >
+    <span data-tech-status-text></span>
+    <button
+      type="button"
+      data-tech-clear
+      class="cursor-pointer rounded-full bg-ink px-3 py-1 text-xs font-extrabold text-white transition-colors hover:bg-pinkish-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pinkish"
+    >
+      Clear
+    </button>
+  </div>
+</Section>
+
+<script>
+  const tiles = document.querySelectorAll<HTMLButtonElement>("[data-tech-filter]");
+  const works = document.querySelectorAll<HTMLElement>("[data-techs]");
+  const chips = document.querySelectorAll<HTMLElement>("[data-tech]");
+  const status = document.querySelector<HTMLElement>("[data-tech-status]");
+  const statusText = document.querySelector<HTMLElement>("[data-tech-status-text]");
+  let active: string | null = null;
+
+  const count = (n: number, word: string) =>
+    n > 0 ? `${n} ${word}${n === 1 ? "" : "s"}` : "";
+
+  // dims the roles and projects that don't use `tech`; null shows everything
+  function select(tech: string | null, name = "") {
+    active = tech;
+    tiles.forEach((tile) =>
+      tile.setAttribute("aria-pressed", String(tile.dataset.techFilter === tech))
+    );
+    chips.forEach((chip) =>
+      chip.toggleAttribute("data-match", chip.dataset.tech === tech)
+    );
+
+    let roles = 0;
+    let projects = 0;
+    works.forEach((work) => {
+      const match = !tech || (work.dataset.techs ?? "").split(" ").includes(tech);
+      work.toggleAttribute("data-dimmed", !match);
+      if (!tech || !match) return;
+      if (work.dataset.kind === "role") roles++;
+      else projects++;
+    });
+
+    if (!status || !statusText) return;
+    status.hidden = !tech;
+    const found = [count(roles, "role"), count(projects, "project")].filter(Boolean);
+    statusText.textContent = `${name} shows up in ${found.join(" and ")}`;
+  }
+
+  tiles.forEach((tile) =>
+    tile.addEventListener("click", () => {
+      const tech = tile.dataset.techFilter ?? null;
+      select(active === tech ? null : tech, tile.dataset.techName);
+    })
+  );
+  document
+    .querySelector("[data-tech-clear]")
+    ?.addEventListener("click", () => select(null));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && active) select(null);
+  });
+</script>

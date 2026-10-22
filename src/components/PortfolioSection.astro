@@ -2,26 +2,17 @@
 import project from "../data/project.json";
 
 import elSemillero from "../assets/elsemillero.png";
-import kataproj from "../assets/katapic.png";
+// import kataproj from "../assets/katapic.png";
 import laEdicola from "../assets/laedico.png";
 import PortfolioStack from "./PortfolioStack/PortfolioStack.astro";
+import Section from "./Section.astro";
 
-/* #22d3ee */
-
-const { kataplunchis, laedicola, elsemillero } = project;
+// kataplunchis is hidden until its page is ready
+const { laedicola, elsemillero } = project;
 ---
 
-<div class="py-10 w-full">
-  <div class="flex justify-center flex-col items-center gap-2">
-    <h2
-      class="text-5xl font-bold backdrop-blur-[0.8px]"
-      aria-label="portfolio"
-      id="portfolio"
-    >
-      Portfolio
-    </h2>
-  </div>
-  <div class="flex flex-col items-center justify-between m-3 gap-3">
+<Section id="portfolio" title="Portfolio">
+  <div class="flex flex-col gap-4">
     <PortfolioStack
       title={"La Edícola"}
       concept={"Ebook storefront for comic publishers (Beta)"}
@@ -36,12 +27,12 @@ const { kataplunchis, laedicola, elsemillero } = project;
       tech={elsemillero.frontend}
       image={elSemillero}
     />
-    <PortfolioStack
+    {/* <PortfolioStack
       title={"Kataplunchis"}
       concept={"Comic artist page (in progress)"}
       description={"Portfolio site for a comic artist, showcasing their art and stories."}
       tech={kataplunchis.frontend}
       image={kataproj}
-    />
+    /> */}
   </div>
-</div>
+</Section>

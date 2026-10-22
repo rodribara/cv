@@ -6,24 +6,11 @@ export interface HireHimAlreadyProps {
 const { title } = Astro.props as HireHimAlreadyProps;
 ---
 
-<main>
-  <div class="flex justify-center flex-col items-center gap-2">
-    <div class="flex justify-center flex-col items-center gap-2 mt-3 mb-16">
-      <a
-        href="mailto:rmau.aten@gmail.com"
-        class="text-3xl font-bold bg-teal-500 p-2 px-7 text-white rounded-lg drop-shadow-xl"
-      >
-        {title}
-      </a>
-    </div>
-  </div>
-
-  <style>
-    .horizontal-line {
-      color: #26273f;
-      border: none;
-      height: 5px;
-      background-color: #26273f;
-    }
-  </style>
-</main>
+<div class="flex">
+  <a
+    href="mailto:rmau.aten@gmail.com"
+    class="rounded-xl bg-pinkish px-8 py-3 text-xl font-extrabold text-white transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_#fe598055] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pinkish active:translate-y-0 motion-reduce:transition-none"
+  >
+    {title}
+  </a>
+</div>

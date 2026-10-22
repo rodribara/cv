@@ -1,0 +1,82 @@
+---
+import Image from "astro/components/Image.astro";
+
+import github from "../assets/icons/github.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+
+const links = [
+  { href: "#profile", label: "Profile" },
+  { href: "#stack", label: "Stack" },
+  { href: "#experiences", label: "Experience" },
+  { href: "#portfolio", label: "Portfolio" },
+];
+---
+
+<div
+  data-nav
+  class="sticky top-2 z-10 -mx-2 flex items-center justify-between gap-3 rounded-2xl border border-transparent bg-white/85 px-3 py-2.5 backdrop-blur transition-[border-color,box-shadow] data-scrolled:border-line data-scrolled:shadow-[0_4px_16px_#2b2a3010] sm:-mx-4 sm:px-4"
+>
+  <div class="fade-in-up flex gap-3 sm:gap-4">
+    <a
+      href="https://github.com/rodribara/"
+      target="_blank"
+      rel="noopener"
+      aria-label="GitHub"
+      class="opacity-70 transition-opacity hover:opacity-100"
+    >
+      <Image src={github} alt="" class="w-6" draggable="false" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/rodri-bara/"
+      target="_blank"
+      rel="noopener"
+      aria-label="LinkedIn"
+      class="opacity-70 transition-opacity hover:opacity-100"
+    >
+      <Image src={linkedin} alt="" class="w-6" draggable="false" />
+    </a>
+  </div>
+  <nav class="fade-in-up flex gap-3.5 text-sm sm:gap-6">
+    {
+      links.map(({ href, label }) => (
+        <a
+          href={href}
+          data-nav-link
+          class="text-muted decoration-2 underline-offset-8 transition-colors hover:text-ink aria-[current=true]:text-pinkish-dark aria-[current=true]:underline"
+        >
+          {label}
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
+<script>
+  const nav = document.querySelector<HTMLElement>("[data-nav]");
+  const links = document.querySelectorAll<HTMLAnchorElement>("[data-nav-link]");
+
+  const onScroll = () => nav?.toggleAttribute("data-scrolled", window.scrollY > 8);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // highlights the link of whichever section crosses the middle of the screen
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        links.forEach((link) => {
+          if (link.hash === `#${entry.target.id}`) {
+            link.setAttribute("aria-current", "true");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      }
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+  links.forEach((link) => {
+    const section = document.querySelector(link.hash);
+    if (section) observer.observe(section);
+  });
+</script>

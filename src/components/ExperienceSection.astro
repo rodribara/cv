@@ -1,22 +1,11 @@
 ---
 import experience from "../data/experience.json";
 import Experience from "./Experience/Experience.astro";
+import Section from "./Section.astro";
 ---
 
-<div>
-  <div class="flex justify-center flex-col items-center pb-4">
-    <h2 class="text-5xl font-bold" id="experiences">Experience</h2>
-  </div>
-  <div class="flex flex-col items-center gap-3">
+<Section id="experiences" title="Experience">
+  <div class="flex flex-col gap-4">
     {experience.experiences.map((tech) => <Experience experience={tech} />)}
   </div>
-</div>
-
-<style>
-  .horizontal-line {
-    color: #26273f;
-    border: none;
-    height: 5px;
-    background-color: #26273f;
-  }
-</style>
+</Section>

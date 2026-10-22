@@ -2,22 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-blue: #26273f;
+  --color-ink: #2b2a30;
+  --color-muted: #6d6771;
   --color-pinkish: #fe5980;
-  --color-damascus: #ff6464;
-  --color-onyx: #373737;
+  --color-pinkish-dark: #d63a62;
+  --color-line: #ece6ea;
+  --color-chip: #f7f3f5;
 }
 
-body {
-  @apply text-onyx;
-  font-family: "Inter", sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-ink;
+    font-family: "Inter", sans-serif;
+  }
 }
-a {
-  margin: 0 0.5rem;
-  font-weight: 200;
-  text-decoration: none;
-  @apply text-onyx;
-}
+
 .fade-in-up {
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
@@ -31,5 +33,15 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in-up {
+    animation: none;
+    opacity: 1;
   }
 }

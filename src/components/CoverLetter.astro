@@ -2,10 +2,6 @@
 import CoverLetterText from "../data/letter.json";
 ---
 
-<div>
-  <div
-    class="flex justify-center flex-col items-center gap-2 mx-3 mt-16 backdrop-blur-[0.8px] rounded-md"
-  >
-    <p class="whitespace-pre-wrap desc">{CoverLetterText.letter}</p>
-  </div>
-</div>
+<p class="max-w-3xl whitespace-pre-line text-lg leading-relaxed">
+  {CoverLetterText.letter}
+</p>

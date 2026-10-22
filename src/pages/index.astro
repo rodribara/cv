@@ -5,6 +5,7 @@ import PortfolioSection from "@components/PortfolioSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
 import Header from "../components/Header.astro";
 import HireHimAlready from "../components/HireHimAlready.astro";
+import Nav from "../components/Nav.astro";
 import StackSection from "../components/StackSection.astro";
 import Layout from "../layouts/Layout.astro";
 import "../style/global.css";
@@ -14,14 +15,17 @@ import "../style/global.css";
   <Container
     ><!-- 
     <img src="/src/assets/title.png" /> -->
-    <Header />
-    <CoverLetter />
+    <Nav />
+    <div class="flex flex-col gap-8">
+      <Header />
+      <CoverLetter />
+    </div>
     <StackSection />
     <ExperienceSection />
     <PortfolioSection />
     <HireHimAlready title="Get in touch" />
     <div
-      class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fe598030_1px,transparent_1px),linear-gradient(to_bottom,#fe598030_1px,transparent_1px)] bg-[size:14px_24px]"
+      class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fe59801a_1px,transparent_1px),linear-gradient(to_bottom,#fe59801a_1px,transparent_1px)] bg-[size:24px_24px]"
     >
     </div>
   </Container>
