@@ -1,0 +1,19 @@
+---
+export interface SectionProps {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props as SectionProps;
+---
+
+<section
+  id={id}
+  class="flex scroll-mt-20 flex-col gap-6"
+  aria-labelledby={`${id}-title`}
+>
+  <h2 id={`${id}-title`} class="text-4xl font-extrabold tracking-tight">
+    {title}
+  </h2>
+  <slot />
+</section>

@@ -6,26 +6,36 @@ export interface ExperienceProps {
   image: string;
   name: string;
   organization: string;
+  period: string;
+  project: string;
   mainRole: string;
   roleStack: {
     frontend: string[];
     backend: string[];
     management: string[];
   };
-  experienceType: string;
   description: string;
 }
 
 const {
   experience: { roleStack, ...experience },
 } = Astro.props as { experience: ExperienceProps };
+
+const techs = [
+  ...roleStack.frontend,
+  ...roleStack.backend,
+  ...roleStack.management,
+];
 ---
 
-<div class="flex flex-col items-center fade-in-up">
-  <div
-    class="flex items-start flex-col md:flex-row border border-[#14b8a6] mx-3 rounded-2xl w-fit backdrop-blur-[0.6px]"
+<!-- the fade wraps the card because its animation would pin the card's opacity -->
+<div class="fade-in-up">
+  <article
+    data-techs={techs.join(" ")}
+    data-kind="role"
+    class="flex flex-col gap-8 rounded-2xl border border-line bg-white p-6 transition-[opacity,filter,border-color] duration-300 hover:border-pinkish/40 data-dimmed:opacity-40 data-dimmed:grayscale md:flex-row"
   >
     <ExperienceDetails experience={experience} />
     <RoleStack roleStack={roleStack} />
-  </div>
+  </article>
 </div>

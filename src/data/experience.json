@@ -2,113 +2,114 @@
   "experiences": [
     {
       "logo": "kyosk",
-      "name": "React Native Developer",
-      "organization": "Local Freelance Project",
+      "name": "Founder & Lead Engineer",
+      "organization": "La Edicola",
+      "period": "2024 – present",
+      "project": "Ebook storefront for local comic publishing houses",
       "mainRole": "full.stack developer",
-      "description": "Developed a web and mobile application enabling writers and scriptwriters to create, update, and share their projects with publishers for feedback and approval.\nDesigned and implemented a specialized system for graphic novel scriptwriters, allowing them to format and present content distinct from traditional writing.\nOptimized the collaboration workflow, ensuring seamless communication between creators and publishers.",
+      "description": "Sole engineer, taking the product from definition to production: scope, UX/UI in Figma, architecture, mobile, web and backend.\nPartnered with 20 local comic publishing houses ahead of the 2027 public launch.\nBuilt the ebook reader, code redemption and Mercado Pago payments.\nDesigned Argiro, a plain-text markup language whose single engine renders one story as a comic, screenplay or visual novel, and built its phone-first web and mobile editors.\nBackend on Cloudflare (Workers, R2, D1) and Supabase (auth, Postgres).\nShip Android releases with EAS Build to Google Play internal testing; monitor production errors with Sentry.",
       "roleStack": {
         "frontend": [
           "reactNative",
           "expo",
-          "typescript",
-          "tailwindCSS",
-          "tamagui",
           "nextjs",
-          "react"
+          "react",
+          "typescript",
+          "tamagui",
+          "tailwindCSS"
         ],
-        "backend": ["mongoDB", "payload", "nodejs", "redux"],
-        "management": ["jira", "cloudflare", "git", "github"],
+        "backend": ["cloudflare", "supa", "postgreSQL", "payload", "mongoDB"],
+        "management": ["figma", "git", "github"],
+        "experienceType": "product"
+      }
+    },
+    {
+      "logo": "freelance",
+      "name": "Software Engineer",
+      "organization": "Freelance",
+      "period": "2023 – present",
+      "project": "Shopify stores and web projects",
+      "mainRole": "full.stack developer",
+      "description": "Customized Shopify stores for e-commerce clients: themes, Liquid templates and new sections aimed at conversion.\nDeveloped Shopify apps and led UI/UX redesigns of client storefronts, keeping them consistent with each brand.\nBuilt web projects with React, Astro and Supabase.",
+      "roleStack": {
+        "frontend": ["shopify", "react", "astro", "typescript", "tailwindCSS"],
+        "backend": ["supa"],
+        "management": ["figma", "kanban"],
         "experienceType": "freelance"
       }
     },
     {
       "logo": "thestartup",
-      "name": "Local Freelance Project",
-      "organization": "Local Freelance",
+      "name": "Software Engineer",
+      "organization": "TheStartup",
+      "period": "2023 – 2024",
+      "project": "Startup funding platform",
       "mainRole": "full.stack developer",
-      "description": "Led a UI overhaul, modernizing the platform’s design, improving responsiveness, and enhancing the overall user experience.\nDeveloped and integrated a new user hub, allowing users to connect, request guidance, and access economic incentives.\nUpdated and optimized API endpoints to ensure seamless communication between frontend and backend services.\nWorked closely with an English-speaking team, contributing to agile development, UI/UX decisions, and performance improvements.",
+      "description": "Led a UI overhaul, modernizing the platform’s design and improving responsiveness across devices.\nBuilt a new user hub where members connect, request guidance and access economic incentives.\nUpdated and optimized API endpoints in Node.js and Express backed by PostgreSQL.\nWorked in an English-speaking team, contributing to agile development and UI/UX decisions.",
       "roleStack": {
         "frontend": [
+          "nextjs",
           "react",
           "typescript",
-          "nextjs",
           "redux",
           "mui",
           "tailwindCSS"
         ],
         "backend": ["nodejs", "express", "postgreSQL"],
         "management": ["jira", "git", "github"],
-        "experienceType": "freelance"
-      }
-    },
-    {
-      "logo": "freelance",
-      "name": "Shopify Developer",
-      "organization": "Local Freelance",
-      "mainRole": "frontend.stack developer",
-      "description": "Developed and maintained multiple Shopify-based e-commerce websites, implementing new features and improving existing functionality.\nDesigned and integrated new sections to enhance user experience and optimize conversion rates.\nLed UI/UX redesigns, modernizing storefronts while ensuring consistency with brand identity.\nExpanded site capabilities by customizing Shopify themes, Liquid templates, and third-party app integrations to meet business needs.",
-      "roleStack": {
-        "frontend": ["shopify"],
-        "backend": [],
-        "management": ["kanban"],
-        "experienceType": "freelance"
+        "experienceType": "employee"
       }
     },
     {
       "logo": "globallogic",
-      "name": "Streaming Platform",
-      "organization": "Local Freelance",
+      "name": "Software Engineer",
+      "organization": "GlobalLogic",
+      "period": "2022 – 2023",
+      "project": "Major streaming platform",
       "mainRole": "full.stack developer",
-      "description": "Developed and maintained a Next.js-based streaming platform using a micro-frontend architecture, ensuring modular and scalable code.\nImplemented new pages and features, optimized existing ones, and enhanced the manifest schema to improve content delivery and user experience.\nCollaborated with a multinational, English-speaking team, actively participating in discussions, code reviews, and agile development processes.\nContributed to performance optimizations and UI improvements, ensuring seamless streaming experiences across devices.",
+      "description": "Added pages and features to a Next.js streaming platform built on a micro-frontend architecture.\nImproved the micro-frontend manifest schema.\nWorked in a multinational, English-speaking team, taking part in code reviews and agile ceremonies.",
       "roleStack": {
-        "frontend": ["react", "typescript", "nextjs"],
+        "frontend": ["nextjs", "react", "typescript"],
         "backend": ["nodejs"],
         "management": ["git", "bitbucket", "kanban"],
-        "experienceType": "freelance"
+        "experienceType": "employee"
       }
     },
     {
       "logo": "globant",
-      "name": "Local Freelance Project",
-      "organization": "Local Freelance",
+      "name": "Software Engineer",
+      "organization": "Globant",
+      "period": "2020 – 2021",
+      "project": "Corporate education benefits platform",
       "mainRole": "full.stack developer",
-      "description": "Enhanced and maintained a Next.js-based portal enabling employees to access tertiary education as a corporate benefit.\nRefactored and updated the API, ensuring seamless data retrieval and integration with internal systems.\nDeveloped and executed bulk MongoDB update scripts to migrate and manage large datasets efficiently.\nDesigned and implemented new sections and improved the main enrollment flow, streamlining the user experience.\nCollaborated with an English-speaking team, ensuring smooth development and feature delivery.",
+      "description": "Improved the main enrollment flow and built new sections of a Next.js portal giving employees access to tertiary education as a corporate benefit.\nRefactored the API and wrote bulk MongoDB update scripts for data migration.\nWorked with an English-speaking team on feature delivery.",
       "roleStack": {
         "frontend": [
+          "nextjs",
           "react",
           "typescript",
           "mui",
-          "nextjs",
           "redux",
-          "storybook",
-          "js",
-          "retool"
+          "storybook"
         ],
-        "backend": ["nodejs", "express", "postgreSQL", "mongoDB"],
+        "backend": ["nodejs", "express", "mongoDB", "postgreSQL"],
         "management": ["git", "jira", "bitbucket", "retool"],
-        "experienceType": "freelance"
+        "experienceType": "employee"
       }
     },
     {
       "logo": "globaltask",
-      "name": "Local Freelance Project",
-      "organization": "Local Freelance",
+      "name": "Software Engineer",
+      "organization": "Globaltask",
+      "period": "2018 – 2020",
+      "project": "React Native expense app and gift box e-commerce",
       "mainRole": "full.stack developer",
-      "description": "Revamped the UI and user flow of a Vue.js application, improving accessibility and design consistency.\nOverhauled the gift box creation process, optimizing the step-by-step interface and backend interactions.\nWorked within a CMS-like environment, ensuring smooth content updates and scalable architecture.\nEngaged in agile development with an English-speaking team, collaborating on features and performance optimizations. \n Designed and developed a React Native app for employees to declare corporate credit card expenses.\nImplemented a receipt photo upload feature, allowing users to attach images for company review.\nEnsured smooth data synchronization and API integration for real-time expense tracking.\nFocused on a responsive and intuitive UI, improving usability and accessibility.",
+      "description": "Built a React Native app for a dairy distributor's employees to declare corporate card expenses, upload receipt photos and sync them to the API.\nRedesigned the storefront and gift box builder flow of a Vue.js and Shopify e-commerce site, with Google Analytics and Google Tag Manager tracking.\nWorked across Vue.js, Next.js and PHP codebases in a CMS-based environment.",
       "roleStack": {
-        "frontend": [
-          "vue",
-          "typescript",
-          "react",
-          "nextjs",
-          "redux",
-          "shopify",
-          "cordoba",
-          "php"
-        ],
-        "backend": ["postgreSQL", "nextjs", "redux"],
+        "frontend": ["reactNative", "vue", "nextjs", "typescript", "shopify", "cordova"],
+        "backend": ["php", "postgreSQL"],
         "management": ["git", "jira", "bitbucket", "github"],
-        "experienceType": "freelance"
+        "experienceType": "employee"
       }
     }
   ]

@@ -7,13 +7,16 @@
   },
   "laedicola": {
     "frontend": [
+      "reactNative",
+      "expo",
       "nextjs",
       "react",
       "typescript",
-      "figma",
       "tailwindCSS",
+      "cloudflare",
+      "supa",
       "postgreSQL",
-      "supa"
+      "figma"
     ]
   }
 }

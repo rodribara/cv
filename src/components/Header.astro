@@ -1,83 +1,48 @@
 ---
 import Image from "astro/components/Image.astro";
 import profile from "../../public/images/profile.png";
-
-import gitIconGreen from "../assets/icons/github-green.svg";
-import linkedin from "../assets/icons/linkedin.svg";
 ---
 
-<main class="flex flex-col w-full">
-  <div
-    class="gap-3 flex pt-3 space-between items-center justify-between w-full"
-  >
-    <div class="flex gap-3 fade-in-up">
-      <a href="https://github.com/rodribara/" class="w-fit m-0" target="_blank">
-        <Image src={gitIconGreen} alt="" class="w-6" draggable="false" />
-      </a>
-      <a href="https://www.linkedin.com/in/rodri-bara/" target="_blank">
-        <Image src={linkedin} alt="" draggable="false" class="w-6" />
-      </a>
-    </div>
-    <nav class="fade-in-up">
-      <a href="#profile" class="backdrop-blur-[1px] p-1">Profile</a>
-      <a href="#stack" class="backdrop-blur-[1px] p-1">Stack</a>
-      <a href="#experiences" class="backdrop-blur-[1px] p-1">Experiences</a>
-      <a href="#portfolio" class="backdrop-blur-[1px] p-1">Portfolio</a>
-    </nav>
-  </div>
-  <header class="flex">
-    <div
-      class="flex justify-between align-middle flex-col-reverse md:flex-row md:gap-0"
-      id="profile"
+<header
+  id="profile"
+  class="flex scroll-mt-20 flex-col-reverse items-start gap-10 pt-6 md:flex-row md:items-center md:justify-between"
+>
+  <h1 class="fade-in-up flex flex-col gap-2">
+    <span class="text-lg text-muted">Hello, I'm</span>
+    <span
+      class="text-4xl font-extrabold tracking-tight text-pinkish sm:text-5xl md:text-6xl"
+      >Rodrigo Atencio</span
     >
-      <div
-        class="fade-in-up flex gap-36 self-center flex-col items-center backdrop-blur-[0.8px] py-4 rounded-md"
-      >
-        <h1
-          class="md:max-w-[630px] text-center w-full text-sm md:text-6xl sm:mt-5 leading-10"
-        >
-          <span class="subtitle"> Hello, I'm </span><span
-            class="text-pinkish subtitle">Rodrigo Atencio</span
-          >,
-          <span>a</span>
-          <span class="role"> fullstack developer</span>
-        </h1>
-      </div>
-      <div class="fade-in-up flex justify-center items-center mb-20 md:mb-0">
-        <Image
-          src={profile}
-          alt="Profile pic"
-          loading="eager"
-          draggable="false"
-          class="profile-pic w-60 h-auto md:mr-6"
-        />
-      </div>
-    </div>
-  </header>
+    <span class="text-2xl font-extrabold md:text-3xl"
+      >Senior mobile & full stack engineer</span
+    >
+  </h1>
+  <div class="fade-in-up mr-8 mb-8">
+    <Image
+      src={profile}
+      alt="Rodrigo Atencio"
+      loading="eager"
+      draggable="false"
+      class="profile-pic w-48 md:w-60"
+    />
+  </div>
 
   <style>
-    h1 {
-      font-size: 50px;
-      margin: 0;
-    }
-    .subtitle {
-      font-weight: 200;
-    }
-    .thin {
-      opacity: 0.7;
-    }
-    .name {
-      font-weight: 400;
-    }
-
-    .role {
-      font-weight: 700;
-    }
-
     .profile-pic {
       border-radius: 50%;
-      margin-top: 1rem;
-      box-shadow: 50px 50px 0px #fe5980;
+      box-shadow: 32px 32px 0 #fe5980;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      box-shadow: 20px 20px 0 #fe5980;
+      transform: translate(6px, 6px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .profile-pic {
+        transition: none;
+      }
     }
   </style>
-</main>
+</header>

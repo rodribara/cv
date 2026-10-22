@@ -3,35 +3,36 @@ import type { TechIconKey } from "@components/Icon.astro";
 import { techIcon } from "@components/Icon.astro";
 import Image from "astro/components/Image.astro";
 
-// import Swiper styles
 export interface TechnologyListProps {
-  title: string;
   techs: TechIconKey[];
+  usedTechs: Set<string>;
 }
-const { title, techs } = Astro.props as TechnologyListProps;
+const { techs, usedTechs } = Astro.props as TechnologyListProps;
 ---
 
-<div
-  class="flex justify-center items-center flex-col align-bottom max-w-5xl w-full"
+<ul
+  class="grid flex-1 grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] content-start gap-1 rounded-2xl border border-line bg-white p-2"
 >
-  <h4 class="text-3xl font-medium" aria-label={title} aria-labelledby={title}>
-    {title}
-  </h4>
-  <ul
-    class="inline-flex flex-wrap gap-6 flex-row justify-center m-2 items-end border border-[#fe5980] rounded-2xl w-fit backdrop-blur-[0.6px]"
-  >
-    {
-      techs.map((tech) => (
-        <li class="flex justify-end flex-col items-center gap-2 pb-1  rounded-md w-20 h-20 ">
+  {
+    techs.map((tech) => (
+      <li>
+        <button
+          type="button"
+          data-tech-filter={tech}
+          data-tech-name={techIcon[tech].name}
+          aria-pressed="false"
+          disabled={!usedTechs.has(tech)}
+          class="flex w-full flex-col items-center gap-2 rounded-xl px-1 py-3 text-xs transition-[background-color,color,transform] focus-visible:outline-2 focus-visible:outline-pinkish enabled:cursor-pointer enabled:hover:bg-chip enabled:active:scale-95 aria-pressed:bg-pinkish/10 aria-pressed:text-pinkish-dark motion-reduce:transition-none"
+        >
           <Image
             draggable="false"
             src={techIcon[tech].icon}
-            alt={tech}
-            class="w-10"
+            alt=""
+            class="h-8 w-8 object-contain"
           />
-          <p class="text-xs">{techIcon[tech].name}</p>
-        </li>
-      ))
-    }
-  </ul>
-</div>
+          {techIcon[tech].name}
+        </button>
+      </li>
+    ))
+  }
+</ul>

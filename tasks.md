@@ -1,5 +1,9 @@
-- [ ] add new jobs (brow)
-- [ ] add la edícola  (react)
-- [ ] add la Katablunchis  (react)
-- [ ] add la  El semillero (react)
+- [x] add new jobs (brow)
+- [x] add la edícola  (react)
+- [x] add la Katablunchis  (react)
+- [x] add la  El semillero (react)
 - [ ] add  some movement (three.js)
+- [ ] replace the Kyosk logo on the La Edicola experience card with a La Edicola logo (src/components/Logo.astro)
+- [ ] add icons for Sentry, Mercado Pago, EAS, Google Analytics / Tag Manager (src/components/Icon.astro)
+- [ ] add Argiro to the portfolio with a screenshot
+- [ ] check Globaltask database: CV says MySQL, site says PostgreSQL

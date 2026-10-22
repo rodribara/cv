@@ -5,27 +5,24 @@ import Image from "astro/components/Image.astro";
 const { tech, image, title, concept, description } = Astro.props;
 ---
 
-<div
-  class="flex flex-col md:flex-row items-center justify-between rounded-2xl border border-[#22d3ee] p-3 w-full backdrop-blur-[0.6px] gap-3"
+<article
+  data-techs={tech.join(" ")}
+  data-kind="project"
+  class="flex flex-col gap-6 rounded-2xl border border-line bg-white p-6 transition-[opacity,filter,border-color] duration-300 hover:border-pinkish/40 data-dimmed:opacity-40 data-dimmed:grayscale md:flex-row md:items-center"
 >
-  <div class="flex flex-col items-center">
-    <h3
-      class="text-3xl font-bold items-center justify-center w-fit backdrop-blur-[0.8px] p-2 rounded-md"
-      aria-label="frontend"
-    >
-      {title}
-    </h3>
-    <p>{concept}</p>
-    <p>{description}</p>
+  <div class="flex flex-col gap-3 md:w-1/2">
+    <div class="flex flex-col gap-1">
+      <h3 class="text-xl font-extrabold">{title}</h3>
+      <p class="text-muted">{concept}</p>
+    </div>
+    <p class="leading-relaxed">{description}</p>
     <TechList title="" techs={tech} />
   </div>
-  <div>
-    <Image
-      src={image}
-      alt="Kataplunchis"
-      class="rounded-2xl border border-gray-200"
-      width={500}
-      height={500}
-    />
-  </div>
-</div>
+  <Image
+    src={image}
+    alt={title}
+    class="rounded-xl border border-line md:w-1/2"
+    width={500}
+    height={500}
+  />
+</article>
