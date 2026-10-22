@@ -1,18 +1,28 @@
 {
   "mainStack": {
     "frontend": [
-      "js",
+      "reactNative",
+      "expo",
       "react",
       "nextjs",
-      "redux",
-      "shopify",
       "typescript",
+      "js",
+      "redux",
+      "rq",
       "tailwindCSS",
-      "expo",
-      "reactNative",
-      "mui"
+      "tamagui",
+      "mui",
+      "shopify"
     ],
-    "backend": ["nodejs", "express", "postgreSQL", "mongoDB", "nest"],
+    "backend": [
+      "nodejs",
+      "express",
+      "nest",
+      "postgreSQL",
+      "mongoDB",
+      "supa",
+      "cloudflare"
+    ],
     "management": [
       "figma",
       "git",
@@ -26,17 +36,17 @@
     ]
   },
   "secondaryStack": [
+    "astro",
     "storybook",
+    "rtl",
+    "cypress",
+    "prisma",
+    "payload",
+    "shadcn",
+    "retool",
     "vue",
     "php",
-    "retool",
-    "cloudflare",
-    "rtl",
-    "cordoba",
-    "supa",
-    "prisma",
-    "cypress",
-    "shadcn",
+    "cordova",
     "python"
   ]
 }
